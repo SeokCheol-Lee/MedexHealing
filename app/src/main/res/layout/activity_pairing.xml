@@ -1,28 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".PairingActivity">
 
-    <ImageView
-        android:id="@+id/pairst"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src = "@drawable/wifi_grey"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="100dp"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:text="페어링중입니다"
-        android:layout_centerHorizontal="true"
-        android:gravity="center_vertical"
-        android:layout_marginBottom="50dp"
-        android:layout_below="@+id/pairst"
-        android:textSize="20dp"/>
-
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
