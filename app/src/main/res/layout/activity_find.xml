@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FindActivity">
+
+    <TextView
+        android:id="@+id/serial_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="시리얼 번호 :"
+        android:textColor="#000000"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="30dp"
+        android:textSize="20dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/serial_text"
+        android:text="XXXX-XXXX"
+        android:layout_marginTop="60dp"
+        android:textSize="20dp"
+        android:layout_marginLeft="5dp"/>
+    <TextView
+        android:id="@+id/ph_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="휴대전화 번호"
+        android:layout_below="@+id/serial_text"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="80dp"
+        android:textSize="20dp"
+        android:textColor="#000000"/>
+
+    <EditText
+        android:id="@+id/ipphone"
+        android:layout_width="356dp"
+        android:layout_height="54dp"
+        android:layout_below="@+id/ph_text"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/recborder"
+        android:ems="10"
+        android:inputType="phone"
+        android:hint="  010 -"/>
+    <Button
+        android:id="@+id/succ_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:text="확인"
+        android:backgroundTint="@color/black"/>
+
+    <TextView
+        android:id="@+id/findpass"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_below="@+id/succ_btn"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/recborder" />
+    <Button
+        android:id="@+id/gotologin_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/findpass"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="로그인 화면으로"
+        android:backgroundTint="@color/black"/>
+
+
+</RelativeLayout>
