@@ -1,11 +1,24 @@
 package org.techtown.medexhealing
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import org.techtown.medexhealing.databinding.ActivityFindBinding
+import org.techtown.medexhealing.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+
+        val lgbinding = ActivityLoginBinding.inflate(layoutInflater)
+        setContentView(lgbinding.root)
+
+        lgbinding.fdpass.setOnClickListener {
+            val intent = Intent(this,FindActivity::class.java)
+            startActivity(intent)
+        }
+
     }
+
+
 }

@@ -1,71 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
     tools:context=".LoginActivity">
 
-    <ImageView
-        android:id="@+id/usercircle"
-        android:paddingTop="20dp"
-        android:layout_marginTop="50dp"
-        android:layout_width="269dp"
-        android:layout_height="213dp"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/baseline_account_circle_24" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/serial_num"
-        android:layout_width="343dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/usercircle"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp"
-        android:background="@drawable/recborder"
-        android:hint="아이디"
-        android:padding="20dp" />
+        <ImageView
+            android:id="@+id/usercircle"
+            android:paddingTop="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_width="269dp"
+            android:layout_height="213dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/baseline_account_circle_24" />
 
-    <EditText
-        android:id="@+id/passwd"
-        android:layout_width="343dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/serial_num"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/recborder"
-        android:hint="비밀번호"
-        android:inputType="textPassword"
-        android:padding="20dp" />
+        <EditText
+            android:id="@+id/serial_num"
+            android:layout_width="343dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/usercircle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/recborder"
+            android:hint="아이디"
+            android:padding="20dp" />
 
-    <CheckBox
-        android:id="@+id/autologin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/passwd"
-        android:layout_marginLeft="30dp"
-        android:text="자동로그인" />
+        <EditText
+            android:id="@+id/passwd"
+            android:layout_width="343dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/serial_num"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/recborder"
+            android:hint="비밀번호"
+            android:inputType="textPassword"
+            android:padding="20dp" />
 
-    <Button
-        android:id="@+id/fdpass"
-        android:layout_width="wrap_content"
+    </RelativeLayout>
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/passwd"
-        android:layout_marginLeft="150dp"
-        android:layout_toRightOf="@+id/autologin"
-        android:backgroundTint="@color/black"
-        android:text="비밀번호찾기"
-        android:textColor="@color/white" />
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/autologin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:gravity="center"
+            android:text="자동로그인"
+            android:scaleX="1.1"
+            android:scaleY="1.1"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="#00ff0000"
+            android:layout_weight="10"/>
+
+        <Button
+            android:id="@+id/fdpass"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="30dp"
+            android:layout_weight="1"
+            android:background="#00ff0000"
+            android:gravity="right"
+            android:text="비밀번호찾기"
+            android:textColor="@color/black" />
+
+
+    </LinearLayout>
     <Button
         android:id="@+id/login_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="100dp"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/black"
+        android:gravity="center"
         android:text="로그인"
-        android:backgroundTint="#000000"/>
+        android:textColor="@color/white"/>
 
 
-</RelativeLayout>
+
+</LinearLayout>
