@@ -10,24 +10,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MedexHealing">
         <activity
+            android:name=".UserCreateActivity"
+            android:exported="false" />
+        <activity
             android:name=".SurveyActivity"
             android:exported="false" />
         <activity
             android:name=".SingnUpActivity"
             android:exported="false"
-            android:theme="@style/Splash"/>
+            android:theme="@style/Splash" />
         <activity
             android:name=".FindActivity"
             android:exported="false"
-            android:theme="@style/Splash"/>
+            android:theme="@style/Splash" />
         <activity
             android:name=".LoginActivity"
             android:exported="false"
-            android:theme="@style/Splash"/>
+            android:theme="@style/Splash" />
         <activity
             android:name=".PairingActivity"
             android:exported="false"
-            android:theme="@style/Splash"/>
+            android:theme="@style/Splash" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
