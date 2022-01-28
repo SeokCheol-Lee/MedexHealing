@@ -25,6 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="OOO님"
+            android:fontFamily="@font/nsr"
             android:textSize="40sp"
             android:textStyle="bold"
             android:layout_marginLeft="20dp"
@@ -51,6 +52,7 @@
         android:layout_marginTop="40dp"
         android:layout_marginEnd="20dp"
         android:text="알람 설정"
+        android:fontFamily="@font/nsr"
         android:textColor="@color/black"
         android:textSize="30sp"
         android:textStyle="bold" />
@@ -64,6 +66,7 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:text="설문 현황"
+        android:fontFamily="@font/nsr"
         android:textColor="@color/black"
         android:textSize="30sp"
         android:textStyle="bold"/>
@@ -76,6 +79,7 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:text="정보수정"
+        android:fontFamily="@font/nsr"
         android:textColor="@color/black"
         android:textSize="30sp"
         android:textStyle="bold"/>

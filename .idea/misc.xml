@@ -21,11 +21,11 @@
         <entry key="app/src/main/res/layout/activity_pairing.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_singn_up.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.23052536231884058" />
-        <entry key="app/src/main/res/layout/activity_survey.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_survey.xml" value="0.924193018590419" />
         <entry key="app/src/main/res/layout/activity_user_create.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_user_info.xml" value="0.29583333333333334" />
         <entry key="app/src/main/res/layout/activity_user_select.xml" value="0.4036458333333333" />
-        <entry key="app/src/main/res/layout/list_item.xml" value="0.2543939382777484" />
+        <entry key="app/src/main/res/layout/list_item.xml" value="0.8025262843869932" />
       </map>
     </option>
   </component>

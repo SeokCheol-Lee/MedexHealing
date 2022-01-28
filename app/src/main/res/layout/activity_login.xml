@@ -30,6 +30,7 @@
             android:layout_marginTop="60dp"
             android:background="@drawable/recborder"
             android:hint="아이디"
+            android:fontFamily="@font/nsr"
             android:padding="20dp" />
 
         <EditText
@@ -41,6 +42,7 @@
             android:layout_marginTop="20dp"
             android:background="@drawable/recborder"
             android:hint="비밀번호"
+            android:fontFamily="@font/nsr"
             android:inputType="textPassword"
             android:padding="20dp" />
 
@@ -58,6 +60,7 @@
             android:layout_marginStart="30dp"
             android:gravity="center"
             android:text="자동로그인"
+            android:fontFamily="@font/nsr"
             android:scaleX="1.1"
             android:scaleY="1.1"/>
         <Button
@@ -77,6 +80,7 @@
             android:background="#00ff0000"
             android:gravity="right"
             android:text="비밀번호찾기"
+            android:fontFamily="@font/nsr"
             android:textColor="@color/black" />
 
 
@@ -89,6 +93,7 @@
         android:backgroundTint="@color/black"
         android:gravity="center"
         android:text="로그인"
+        android:fontFamily="@font/nsr"
         android:textColor="@color/white"/>
 
 
