@@ -10,13 +10,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MedexHealing">
         <activity
+            android:name=".ChangeInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
+        <activity
             android:name=".UserSelectActivity"
             android:exported="false"
-            android:theme="@style/Splash"/>
+            android:theme="@style/Splash" />
         <activity
             android:name=".UserCreateActivity"
             android:exported="false"
-            android:theme="@style/Splash"/>
+            android:theme="@style/Splash" />
         <activity
             android:name=".SurveyActivity"
             android:exported="false" />
