@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MedexHealing">
         <activity
+            android:name=".AlarmPlusActivity"
+            android:exported="false" />
+        <activity
             android:name=".ChangeInfoActivity"
             android:exported="false" />
         <activity
