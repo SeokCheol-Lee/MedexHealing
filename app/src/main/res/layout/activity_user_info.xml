@@ -21,6 +21,7 @@
             android:src="@drawable/man"/>
 
         <TextView
+            android:id="@+id/tv_usname"
             android:layout_marginTop="150dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

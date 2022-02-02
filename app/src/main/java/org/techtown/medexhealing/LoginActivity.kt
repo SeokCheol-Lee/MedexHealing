@@ -3,7 +3,6 @@ package org.techtown.medexhealing
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import org.techtown.medexhealing.databinding.ActivityFindBinding
 import org.techtown.medexhealing.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
@@ -21,6 +20,7 @@ class LoginActivity : AppCompatActivity() {
             val intent = Intent(this, UserSelectActivity::class.java)
             startActivity(intent)
         }
+
 
     }
 

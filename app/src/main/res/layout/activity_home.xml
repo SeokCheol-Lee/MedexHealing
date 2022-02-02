@@ -9,12 +9,13 @@
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/tv_home"
         android:layout_marginTop="150dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="안녕하세요 OOO님 :)"
         android:fontFamily="@font/nsr"
-        android:textSize="40sp"
+        android:textSize="38dp"
         android:textStyle="bold"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
@@ -30,6 +31,7 @@
 
 
     <Button
+        android:id="@+id/btn_modselect"
         android:background="@drawable/home_button"
         android:layout_width="match_parent"
         android:layout_height="80dp"
@@ -44,6 +46,7 @@
 
 
     <Button
+        android:id="@+id/btn_bedinfo"
         android:background="@drawable/home_button"
         android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
@@ -57,6 +60,7 @@
         android:textStyle="bold"/>
 
     <Button
+        android:id="@+id/btn_info"
         android:background="@drawable/home_button"
         android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
@@ -70,6 +74,7 @@
         android:textStyle="bold"/>
 
     <Button
+        android:id="@+id/btn_myinfo"
         android:background="@drawable/home_button"
         android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"

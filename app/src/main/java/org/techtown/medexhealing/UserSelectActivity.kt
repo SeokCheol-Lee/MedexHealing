@@ -3,6 +3,8 @@ package org.techtown.medexhealing
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import org.techtown.medexhealing.databinding.ActivityUserSelectBinding
 
@@ -26,6 +28,7 @@ class UserSelectActivity : AppCompatActivity() {
             val intent = Intent(this, UserCreateActivity::class.java)
             startActivity(intent)
         }
+
     }
 
 }
