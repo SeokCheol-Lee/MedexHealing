@@ -46,6 +46,7 @@
 
 
     <Button
+        android:id="@+id/btn_alarm_setting"
         android:background="@drawable/home_button"
         android:layout_width="match_parent"
         android:layout_height="80dp"
@@ -60,6 +61,7 @@
 
 
     <Button
+        android:id="@+id/btn_survey"
         android:background="@drawable/home_button"
         android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
@@ -73,6 +75,7 @@
         android:textStyle="bold"/>
 
     <Button
+        android:id="@+id/btn_info_modify"
         android:background="@drawable/home_button"
         android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"

@@ -20,6 +20,10 @@ class LoginActivity : AppCompatActivity() {
             val intent = Intent(this, UserSelectActivity::class.java)
             startActivity(intent)
         }
+        lgbinding.btnRegister.setOnClickListener {
+            val intent = Intent(this,SingnUpActivity::class.java)
+            startActivity(intent)
+        }
 
 
     }

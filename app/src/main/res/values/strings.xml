@@ -2,4 +2,11 @@
     <string name="app_name">MedexHealing</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="info">인포메이션</string>
+    <string name="ranadd">랜덤 추가 정보 항목</string>
+    <string name="rantext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget pharetra diam. Curabitur pellentesque ipsum bibendum orci rhoncus, id auctor mi posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet venenatis elit, non iaculis felis.</string>
+    <string name="sleep">숙면</string>
+    <string name="breath">호흡법</string>
+    <string name="streath">스트레칭</string>
+    <string name="noise">코골이</string>
 </resources>
