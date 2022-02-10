@@ -20,7 +20,6 @@
         android:textColor="@color/black"
         android:textSize="15sp"
         android:textStyle="bold"
-        android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.153"
         app:layout_constraintStart_toStartOf="parent"
@@ -188,7 +187,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine" />
 
-    <EditText
+    <TextView
         android:id="@+id/editTextTextMultiLine"
         android:layout_width="match_parent"
         android:layout_height="150dp"
@@ -212,6 +211,7 @@
         android:layout_marginStart="48dp"
         android:layout_marginTop="3dp"
         android:layout_marginEnd="52dp"
+        android:inputType="text"
         android:ems="10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
