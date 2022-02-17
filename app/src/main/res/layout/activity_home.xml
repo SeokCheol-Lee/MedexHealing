@@ -10,16 +10,16 @@
 
     <TextView
         android:id="@+id/tv_home"
-        android:layout_marginTop="150dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="안녕하세요 OOO님 :)"
-        android:fontFamily="@font/nsr"
-        android:textSize="38dp"
-        android:textStyle="bold"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="100dp"
         android:layout_marginRight="20dp"
-        android:textColor="@color/black"/>
+        android:fontFamily="@font/nsr"
+        android:text="안녕하세요 OOO님 :)"
+        android:textColor="@color/black"
+        android:textSize="38dp"
+        android:textStyle="bold" />
 
     <View
         android:layout_width="match_parent"
@@ -86,6 +86,19 @@
         android:textColor="@color/black"
         android:textSize="30sp"
         android:textStyle="bold"/>
+    <Button
+        android:id="@+id/btn_pairing"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/home_button"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:fontFamily="@font/nsr"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:text="페어링 하기"/>
 
 
 </LinearLayout>

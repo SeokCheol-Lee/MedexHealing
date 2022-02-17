@@ -13,11 +13,6 @@ class HomeActivity : AppCompatActivity() {
         val hmbinding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(hmbinding.root)
 
-        if (intent.hasExtra("name")){
-            hmbinding.tvHome.setText("안녕하세요 " + intent.getStringExtra("name") + "님 :)")
-        }else{
-            Toast.makeText(this,"Error!",Toast.LENGTH_LONG).show()
-        }
         hmbinding.btnModselect.setOnClickListener{
             val msintent = Intent(this, ModSelectActivity::class.java)
             startActivity(msintent)
@@ -28,8 +23,11 @@ class HomeActivity : AppCompatActivity() {
         }
         hmbinding.btnMyinfo.setOnClickListener{
             val uiintent = Intent(this, UserInfoActivity::class.java)
-            intent.putExtra("uiname",intent.getStringExtra("name"))
             startActivity(uiintent)
+        }
+        hmbinding.btnPairing.setOnClickListener {
+            val paintent = Intent(this, EspTouchActivity::class.java)
+            startActivity(paintent)
         }
     }
 }

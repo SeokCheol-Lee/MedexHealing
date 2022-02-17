@@ -23,7 +23,6 @@ class ProfileAdapter(val profilelist: ArrayList<Profiles>) : RecyclerView.Adapte
         holder.name.text = profilelist.get(position).name
         holder.itemView.setOnClickListener {
             val intent = Intent(holder.itemView?.context, HomeActivity::class.java)
-            intent.putExtra("name",profilelist.get(position).name)
             ContextCompat.startActivity(holder.itemView.context, intent, null)
 
         }
