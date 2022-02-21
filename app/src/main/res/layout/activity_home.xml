@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomeActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/background">
 
     <TextView
         android:id="@+id/tv_home"
@@ -17,7 +18,7 @@
         android:layout_marginRight="20dp"
         android:fontFamily="@font/nsr"
         android:text="안녕하세요 OOO님 :)"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="38dp"
         android:textStyle="bold" />
 

@@ -60,8 +60,8 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:backgroundTint="@color/black"
-        android:text="확인"
         android:fontFamily="@font/nsr"
+        android:text="확인"
         android:textColor="@color/white" />
 
     <TextView
@@ -83,8 +83,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
         android:backgroundTint="@color/black"
-        android:text="로그인 화면으로"
         android:fontFamily="@font/nsr"
+        android:text="로그인 화면으로"
         android:textColor="@color/white" />
 
 

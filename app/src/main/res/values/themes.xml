@@ -16,4 +16,16 @@
     <style name="Splash" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="windowActionBar">true</item>
     </style>
+
+
+    android:fontFamily="@font/nsr"
+    android:textColor="@color/black"
+    android:textSize="30sp"
+    android:textStyle="bold"
+    // 앱 내 여러 텍스트 스타일
+    <style name="titleText1">
+        <item name="android:fontFamily">@font/nsr</item>
+        <item name="android:textColor"></item>
+    </style>
+
 </resources>

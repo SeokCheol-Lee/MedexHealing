@@ -17,4 +17,10 @@
     <color name="purple">#7F00FF</color>
     <color name="pink">#FFC0CB</color>
     <color name="dividingLine">#D8D6D6</color>
+
+    // 메인 컬러
+    <color name="main_green">#BFEEB7</color>    // 메인 파스텔 그린
+    <color name="main_blue">#72d3fe</color>     // 메인 파스텔 블루
+    <color name="main_black">#444444</color>    // 메인 파스텔 블랙
+
 </resources>
