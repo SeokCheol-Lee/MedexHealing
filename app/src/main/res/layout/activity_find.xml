@@ -4,18 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FindActivity">
+    tools:context=".FindActivity"
+    android:background="@drawable/background">
 
     <TextView
         android:id="@+id/serial_text"
+        style="@style/titleText3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="60dp"
         android:fontFamily="@font/nsr"
         android:text="시리얼 번호 :"
-        android:textColor="#000000"
-        android:textSize="20dp" />
+        android:textColor="@color/white" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -25,53 +26,56 @@
         android:layout_toRightOf="@+id/serial_text"
         android:fontFamily="@font/nsr"
         android:text="XXXX-XXXX"
-        android:textSize="20dp" />
+        style="@style/titleText3"
+        android:textColor="@color/white"/>
 
     <TextView
         android:id="@+id/ph_text"
+        style="@style/titleText3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/serial_text"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="80dp"
-        android:text="휴대전화 번호"
         android:fontFamily="@font/nsr"
-        android:textColor="#000000"
-        android:textSize="20dp" />
+        android:text="휴대전화 번호"
+        android:textColor="@color/white" />
 
     <EditText
         android:id="@+id/ipphone"
-        android:layout_width="356dp"
-        android:layout_height="54dp"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
         android:layout_below="@+id/ph_text"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="5dp"
         android:layout_marginRight="30dp"
         android:background="@drawable/recborder"
         android:ems="20"
-        android:hint="010 -"
         android:fontFamily="@font/nsr"
+        android:hint="010 -"
         android:inputType="phone"
         android:padding="10dp" />
 
     <Button
         android:id="@+id/succ_btn"
+        style="@style/titleText4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:backgroundTint="@color/black"
+        android:layout_below="@+id/ipphone"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/main_green"
         android:fontFamily="@font/nsr"
-        android:text="확인"
-        android:textColor="@color/white" />
+        android:text="확인" />
 
     <TextView
         android:id="@+id/findpass"
         android:layout_width="match_parent"
-        android:layout_height="170dp"
+        android:layout_height="55dp"
         android:layout_below="@+id/succ_btn"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="30dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/recborder" />
 
@@ -82,10 +86,10 @@
         android:layout_below="@+id/findpass"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
-        android:backgroundTint="@color/black"
-        android:fontFamily="@font/nsr"
+        android:backgroundTint="@color/main_green"
         android:text="로그인 화면으로"
-        android:textColor="@color/white" />
+        style="@style/titleText4"
+        android:textColor="@color/black" />
 
 
 </RelativeLayout>

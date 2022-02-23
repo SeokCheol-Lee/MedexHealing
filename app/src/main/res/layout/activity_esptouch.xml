@@ -4,6 +4,7 @@
     android:id="@+id/activity_esptouch"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     android:padding="16dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -18,7 +19,9 @@
             android:singleLine="true"
             android:text="SSID: "
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -40,8 +43,10 @@
             android:layout_marginTop="8dp"
             android:singleLine="true"
             android:text="BSSID:"
+            android:textStyle="bold"
+            android:textSize="20sp"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/apSsidLabel" />
 
@@ -104,14 +109,22 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:checked="true"
-                android:text="@string/esptouch1_package_broadcast" />
+                android:text="@string/esptouch1_package_broadcast"
+                android:textColor="@color/white"
+                android:fontFamily="@font/nsr"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
 
             <RadioButton
                 android:id="@+id/packageMulticast"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:text="@string/esptouch1_package_multicast" />
+                android:text="@string/esptouch1_package_multicast"
+                android:textColor="@color/white"
+                android:fontFamily="@font/nsr"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
         </RadioGroup>
 
         <TextView
@@ -125,10 +138,16 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/confirmBtn"
-            android:layout_width="match_parent"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="@string/esptouch1_confirm"
-            app:layout_constraintBottom_toBottomOf="parent" />
+            android:layout_marginBottom="40dp"
+            android:backgroundTint="@color/main_green"
+            android:text="확인"
+            style="@style/titleText4"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout

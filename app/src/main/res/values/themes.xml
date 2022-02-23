@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.MedexHealing" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.MedexHealing" parent="Theme.AppCompat.Light">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -18,14 +18,41 @@
     </style>
 
 
-    android:fontFamily="@font/nsr"
-    android:textColor="@color/black"
-    android:textSize="30sp"
-    android:textStyle="bold"
     // 앱 내 여러 텍스트 스타일
+    // 제목1
     <style name="titleText1">
         <item name="android:fontFamily">@font/nsr</item>
-        <item name="android:textColor"></item>
+        <item name="android:textSize">40sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    // 제목2
+    <style name="titleText2">
+        <item name="android:fontFamily">@font/nsr</item>
+        <item name="android:textSize">35sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    // 제목3
+    <style name="titleText3">
+        <item name="android:fontFamily">@font/nsr</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    // 제목4
+    <style name="titleText4">
+        <item name="android:fontFamily">@font/nsr</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    // 내용1
+    <style name="detailText1">
+        <item name="android:fontFamily">@font/nsr</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">20sp</item>
     </style>
 
 </resources>

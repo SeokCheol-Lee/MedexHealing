@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomeActivity"
+    android:background="@drawable/background"
     android:orientation="vertical">
 
     <TextView
@@ -13,24 +14,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="현재 등록 번호"
-        android:fontFamily="@font/nsr"
-        android:textSize="40sp"
-        android:textStyle="bold"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:textColor="@color/black"/>
+        android:textColor="@color/white"
+        style="@style/titleText1" />
 
     <TextView
         android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="010-XXXX-XXXX"
-        android:fontFamily="@font/nsr"
-        android:textSize="40sp"
-        android:textStyle="bold"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:textColor="@color/black"/>
+        android:textColor="@color/white"
+        style="@style/titleText1"/>
 
     <View
         android:layout_width="match_parent"
@@ -47,8 +44,9 @@
         android:fontFamily="@font/nsr"
         android:textSize="30sp"
         android:textStyle="bold"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
         android:layout_marginTop="50dp"/>
 
     <EditText
@@ -60,16 +58,16 @@
         android:background="@drawable/recborder" />
 
     <Button
-        android:layout_marginTop="60dp"
-        android:background="@drawable/purple_border_button"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
+        android:layout_marginTop="220dp"
+        android:backgroundTint="@color/main_green"
+        android:layout_width="150dp"
+        android:layout_height="55dp"
         android:layout_gravity="center"
         android:text="변경하기"
         android:fontFamily="@font/nsr"
-        android:textColor="@color/purple"
+        android:textColor="@color/black"
         android:textStyle="bold"
-        android:textSize="15dp"/>
+        android:textSize="20dp"/>
 
 
 

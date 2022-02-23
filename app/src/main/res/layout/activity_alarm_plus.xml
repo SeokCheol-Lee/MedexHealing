@@ -4,31 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AlarmPlusActivity">
-
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/without_border_button"
-        android:fontFamily="@font/nsr"
-        android:text="취소"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    tools:context=".AlarmPlusActivity"
+    android:background="@drawable/background">
 
     <Button
         android:id="@+id/button8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/without_border_button"
+        android:layout_width="150dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="100dp"
         android:fontFamily="@font/nsr"
         android:text="저장"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/main_green"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView24" />
 
     <TextView
         android:id="@+id/textView"
@@ -37,12 +30,11 @@
         android:layout_marginTop="25dp"
         android:fontFamily="@font/nsr"
         android:text="알람 추가"
-        android:textColor="@color/black"
-        android:textSize="18dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/button8"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
@@ -59,9 +51,9 @@
         android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="113dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button7" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
         android:id="@+id/spinner7"
@@ -78,7 +70,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:text=":"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/spinner8"
@@ -92,8 +84,8 @@
         android:layout_marginTop="20dp"
         android:fontFamily="@font/nsr"
         android:text="기울기 조절"
-        android:textColor="@color/black"
-        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/textView22"
         app:layout_constraintTop_toBottomOf="@+id/textView22" />
@@ -106,8 +98,8 @@
         android:layout_marginTop="200dp"
         android:fontFamily="@font/nsr"
         android:text="수면 기상"
-        android:textColor="@color/black"
-        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button9" />
@@ -146,8 +138,8 @@
         android:layout_marginTop="20dp"
         android:fontFamily="@font/nsr"
         android:text="다시 알림"
-        android:textColor="@color/black"
-        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/textView22"
         app:layout_constraintTop_toBottomOf="@+id/textView23" />
@@ -161,6 +153,8 @@
         android:background="@drawable/circle_button"
         android:fontFamily="@font/nsr"
         android:text="월"
+        android:textSize="20sp"
+        android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner8" />
@@ -173,6 +167,8 @@
         android:background="@drawable/circle_button"
         android:fontFamily="@font/nsr"
         android:text="화"
+        android:textSize="20sp"
+        android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/button9"
         app:layout_constraintTop_toTopOf="@+id/button9" />
@@ -185,6 +181,8 @@
         android:background="@drawable/circle_button"
         android:fontFamily="@font/nsr"
         android:text="수"
+        android:textSize="20sp"
+        android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/button10"
         app:layout_constraintTop_toTopOf="@+id/button9" />
@@ -197,6 +195,8 @@
         android:background="@drawable/circle_button"
         android:fontFamily="@font/nsr"
         android:text="목"
+        android:textSize="20sp"
+        android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/button11"
         app:layout_constraintTop_toTopOf="@+id/button9" />
@@ -209,6 +209,8 @@
         android:background="@drawable/circle_button"
         android:fontFamily="@font/nsr"
         android:text="금"
+        android:textSize="20sp"
+        android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/button12"
         app:layout_constraintTop_toTopOf="@+id/button9" />
@@ -221,6 +223,8 @@
         android:background="@drawable/circle_button"
         android:fontFamily="@font/nsr"
         android:text="토"
+        android:textSize="20sp"
+        android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/button13"
         app:layout_constraintTop_toTopOf="@+id/button9" />
@@ -233,6 +237,8 @@
         android:background="@drawable/circle_button"
         android:fontFamily="@font/nsr"
         android:text="일"
+        android:textSize="20sp"
+        android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/button14"
         app:layout_constraintTop_toTopOf="@+id/button9" />
