@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/background"
     tools:context=".LoginActivity">
 
     <RelativeLayout
@@ -14,12 +15,11 @@
 
         <ImageView
             android:id="@+id/usercircle"
-            android:layout_width="269dp"
-            android:layout_height="213dp"
+            android:layout_width="300dp"
+            android:layout_height="250dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="50dp"
-            android:paddingTop="20dp"
-            android:src="@drawable/baseline_account_circle_24" />
+            android:src="@drawable/white_logo" />
 
         <EditText
             android:id="@+id/et_loginid"
@@ -27,11 +27,11 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/usercircle"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="30dp"
             android:background="@drawable/recborder"
             android:fontFamily="@font/nsr"
-            android:inputType="text"
             android:hint="ID"
+            android:inputType="text"
             android:padding="20dp" />
 
         <EditText
@@ -58,7 +58,7 @@
             android:id="@+id/autologin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="25dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="10dp"
             android:fontFamily="@font/nsr"
@@ -66,6 +66,8 @@
             android:scaleX="1.1"
             android:scaleY="1.1"
             android:text="자동로그인"
+            android:textStyle="bold"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -75,15 +77,16 @@
             android:layout_width="wrap_content"
             android:layout_height="22dp"
             android:layout_gravity="center_vertical"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="24dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
             android:layout_marginBottom="22dp"
             android:layout_weight="1"
             android:background="#00ff0000"
             android:fontFamily="@font/nsr"
             android:gravity="right"
             android:text="비밀번호찾기"
-            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -92,23 +95,24 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
     <Button
         android:id="@+id/login_btn"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="@drawable/recborder"
+        android:background="@drawable/home_button"
         android:gravity="center"
         android:text="로그인"
-        android:fontFamily="@font/nsr"
+        style="@style/titleText4"
         android:textColor="@color/black"/>
+
     <Button
         android:id="@+id/btn_register"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="20dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="10dp"
         android:background="#00000000"
-        android:text="회원가입"/>
-
+        android:text="회원가입 하기"
+        android:textColor="@color/white" />
 
 
 </LinearLayout>
