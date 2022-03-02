@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserCreateActivity">
+    tools:context=".UserCreateActivity"
+    android:background="@drawable/background">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -18,26 +19,18 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/without_border_button"
-        android:text="취소"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
         android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/without_border_button"
+        android:layout_width="155dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="130dp"
+        android:backgroundTint="@color/main_green"
         android:text="저장"
         android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button5" />
 
     <TextView
         android:id="@+id/textView19"
@@ -46,7 +39,7 @@
         android:layout_marginStart="80dp"
         android:layout_marginTop="10dp"
         android:text="이름"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -79,7 +72,7 @@
         android:layout_marginStart="80dp"
         android:layout_marginTop="20dp"
         android:text="생년월일"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -92,7 +85,7 @@
         android:layout_marginStart="80dp"
         android:layout_marginTop="20dp"
         android:text="성별"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -105,8 +98,10 @@
         android:layout_marginStart="80dp"
         android:layout_marginTop="10dp"
         android:text="남"
-        android:textColor="#7F00FF"
-        android:background="@drawable/purple_border_button"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/main_blue"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
@@ -116,8 +111,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:text="여"
-        android:textColor="#FFC0CB"
-        android:background="@drawable/pink_border_button"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/pink"
         app:layout_constraintStart_toEndOf="@+id/button5"
         app:layout_constraintTop_toTopOf="@+id/button5" />
 

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SingnUpActivity"
-    android:background="@drawable/starback"
+    android:background="@drawable/background"
     >
 
 
@@ -61,7 +61,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="76dp"
         android:layout_marginEnd="310dp"
         android:fontFamily="@font/nsr"
         android:text="비밀번호"
@@ -71,7 +70,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_siralnum" />
+        app:layout_constraintTop_toBottomOf="@+id/et_id" />
 
     <EditText
         android:inputType="textPassword"
@@ -165,18 +164,18 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="60dp"
-        android:backgroundTint="#00000000"
+        android:backgroundTint="@color/main_green"
         android:fontFamily="@font/nsr"
         android:text="확인"
-        android:textColor="@color/white"
-        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkBox"
-        app:layout_constraintVertical_bias="0.164" />
+        app:layout_constraintVertical_bias="0.285" />
 
     <CheckBox
         android:id="@+id/checkBox"
@@ -210,7 +209,7 @@
     <EditText
         android:id="@+id/et_id"
         android:layout_width="311dp"
-        android:layout_height="36dp"
+        android:layout_height="40dp"
         android:layout_marginStart="48dp"
         android:layout_marginTop="3dp"
         android:layout_marginEnd="52dp"
