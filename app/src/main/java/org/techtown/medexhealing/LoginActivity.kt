@@ -42,10 +42,12 @@ class LoginActivity : AppCompatActivity() {
         var loginService = retrofit.create(LoginService::class.java)
 
         lgbinding.loginBtn.setOnClickListener{
-            var uid = lgbinding.etLoginid.text.toString()
-            var upw = lgbinding.etLoginpw.text.toString()
+            //var uid = lgbinding.etLoginid.text.toString()
+            //var upw = lgbinding.etLoginpw.text.toString()
+            val intent = Intent(this,HomeActivity::class.java)
+            startActivity(intent)
 
-
+/*
             Log.d("Main","id: $uid, pw: $upw")
 
             loginService.requestLogin(uid,upw).enqueue(object: Callback<Login> {
@@ -68,7 +70,7 @@ class LoginActivity : AppCompatActivity() {
 
                 }
             })
-
+*/
         }
 
 

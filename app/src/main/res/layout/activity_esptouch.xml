@@ -61,25 +61,26 @@
             app:layout_constraintStart_toEndOf="@id/apBssidLabel"
             app:layout_constraintTop_toTopOf="@id/apBssidLabel" />
 
-        <com.google.android.material.textfield.TextInputLayout
+        <LinearLayout
             android:id="@+id/apPasswordLayout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:hint="@string/esptouch1_password_title"
             app:layout_constraintTop_toBottomOf="@id/apBssidLabel"
             app:passwordToggleEnabled="true">
 
-            <com.google.android.material.textfield.TextInputEditText
+            <EditText
                 android:id="@+id/apPasswordEdit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
+                android:hint="Password"
+                android:textColorHint="@color/grey"
                 android:singleLine="true" />
-        </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
+        <LinearLayout
             android:id="@+id/deviceCountLayout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
@@ -88,13 +89,14 @@
             android:hint="@string/esptouch1_device_count_title"
             app:layout_constraintTop_toBottomOf="@id/apPasswordLayout">
 
-            <com.google.android.material.textfield.TextInputEditText
+            <EditText
                 android:id="@+id/deviceCountEdit"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:inputType="number"
+                android:textColor="@color/white"
                 android:text="1" />
-        </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
 
         <RadioGroup
             android:id="@+id/packageModeGroup"
@@ -136,7 +138,7 @@
             app:layout_constraintTop_toBottomOf="@id/packageModeGroup"
             app:layout_goneMarginStart="4dp" />
 
-        <com.google.android.material.button.MaterialButton
+        <Button
             android:id="@+id/confirmBtn"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
