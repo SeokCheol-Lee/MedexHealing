@@ -15,9 +15,12 @@ class UserSelectActivity : AppCompatActivity() {
         val usbinding = ActivityUserSelectBinding.inflate(layoutInflater)
         setContentView(usbinding.root)
 
+        val man = R.drawable.man
+        val woman = R.drawable.woman
+
         val profileList = arrayListOf(
-            Profiles(R.drawable.man,"홍길동"),
-            Profiles(R.drawable.woman, "아나스타샤")
+            Profiles(man,"홍길동"),
+            Profiles(woman, "아나스타샤")
         )
         usbinding.rvProfile.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         usbinding.rvProfile.setHasFixedSize(true)

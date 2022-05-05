@@ -36,6 +36,7 @@ class SingnUpActivity : AppCompatActivity() {
             var upw = rgbinding.etPw.text.toString()
             var upc = rgbinding.etCheckpw.text.toString()
             var uph = rgbinding.etPhonenum.text.toString()
+            var dialog = AlertDialog.Builder(this@SingnUpActivity)
 
             if(uid.isEmpty()||upw.isEmpty()||uph.isEmpty()||upc.isEmpty()){
                 isExistBlack = true
@@ -50,9 +51,9 @@ class SingnUpActivity : AppCompatActivity() {
                 Log.d("Main","serial: $sir id: $uid, pw: $upw, phone: $uph")
 
                 registerService.requestRegister(sir,uid,upw,uph).enqueue(object: Callback<Register> {
+
                     override fun onResponse(call: Call<Register>, response: Response<Register>) {
                         val register = response.body()
-                        var dialog = AlertDialog.Builder(this@SingnUpActivity)
                         Log.d("회원가입 성공","msg : "+register?.msg)
                         Log.d("회원가입 성공","msg : "+register?.code)
                         dialog.setTitle(register?.msg)
@@ -64,7 +65,6 @@ class SingnUpActivity : AppCompatActivity() {
                     }
 
                     override fun onFailure(call: Call<Register>, t: Throwable) {
-                        var dialog = AlertDialog.Builder(this@SingnUpActivity)
                         Log.d("회원가입 실패","${t.localizedMessage}")
                         dialog.setTitle("에러")
                         dialog.setMessage("호출에 실패하였습니다")

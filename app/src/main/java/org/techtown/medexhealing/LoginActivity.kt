@@ -25,10 +25,12 @@ class LoginActivity : AppCompatActivity() {
             val intent = Intent(this,FindActivity::class.java)
             startActivity(intent)
         }
+        /*
         lgbinding.loginBtn.setOnClickListener {
             val intent = Intent(this, UserSelectActivity::class.java)
             startActivity(intent)
         }
+         */
         lgbinding.btnRegister.setOnClickListener {
             val intent = Intent(this,SingnUpActivity::class.java)
             startActivity(intent)
@@ -42,17 +44,34 @@ class LoginActivity : AppCompatActivity() {
         var loginService = retrofit.create(LoginService::class.java)
 
         lgbinding.loginBtn.setOnClickListener{
-            //var uid = lgbinding.etLoginid.text.toString()
-            //var upw = lgbinding.etLoginpw.text.toString()
+            var uid = lgbinding.etLoginid.text.toString()
+            var upw = lgbinding.etLoginpw.text.toString()
             val intent = Intent(this,HomeActivity::class.java)
-            startActivity(intent)
+            var dialog = AlertDialog.Builder(this@LoginActivity)
 
-/*
+            if(uid.isEmpty()){
+                dialog.setTitle("로그인 실패")
+                dialog.setMessage("아이디를 입력하세요")
+                dialog.show()
+            }
+            else if(upw.isEmpty()){
+                dialog.setTitle("로그인 실패")
+                dialog.setMessage("비밀번호를 입력하세요")
+                dialog.show()
+            }
+            else{
+                dialog.setTitle("에러")
+                dialog.setMessage("로그인에 실패하였습니다")
+                dialog.show()
+            }
+
+            //startActivity(intent)
+
+
             Log.d("Main","id: $uid, pw: $upw")
 
             loginService.requestLogin(uid,upw).enqueue(object: Callback<Login> {
                 override fun onFailure(call: Call<Login>, t: Throwable) {
-                    var dialog = AlertDialog.Builder(this@LoginActivity)
                     Log.d("로그인 실패","${t.localizedMessage}")
                     dialog.setTitle("에러")
                     dialog.setMessage("호출에 실패하였습니다")
@@ -62,15 +81,27 @@ class LoginActivity : AppCompatActivity() {
                 override fun onResponse(call: Call<Login>, response: Response<Login>) {
                     val login = response.body()
                     var dialog = AlertDialog.Builder(this@LoginActivity)
-                    Log.d("로그인 성공","msg : "+login?.msg)
-                    Log.d("로그인 성공","msg : "+login?.code)
-                    dialog.setTitle(login?.msg)
-                    dialog.setMessage(login?.code)
-                    dialog.show()
+
+
+                    if(login?.code == 100){
+                        Log.d("로그인 성공","msg : "+login?.msg)
+                        Log.d("로그인 성공","msg : "+login?.code)
+                        dialog.setTitle(login?.msg)
+                        dialog.setMessage(login?.code)
+                        dialog.show()
+                        startActivity(intent)
+                    }
+                    else {
+                        Log.d("존재하지 않는 아이디","msg : "+login?.msg)
+                        Log.d("존재하지 않는 아이디","msg : "+login?.code)
+                        dialog.setTitle("로그인 실패")
+                        dialog.setMessage("존재하지 않는 아이디입니다")
+                        dialog.show()
+                    }
 
                 }
             })
-*/
+
         }
 
 
