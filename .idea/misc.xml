@@ -26,10 +26,16 @@
         <entry key="..\:/apptest/MedexHealing/app/src/main/res/layout/fragment_modfragment3.xml" value="0.36666666666666664" />
         <entry key="..\:/apptest/MedexHealing/app/src/main/res/layout/fragment_modfragment4.xml" value="0.36666666666666664" />
         <entry key="..\:/apptest/MedexHealing/app/src/main/res/layout/list_item.xml" value="0.36666666666666664" />
+        <entry key="..\:/apptest/MedexHealing/app/src/main/res/layout/modifypw.xml" value="0.36666666666666664" />
         <entry key="..\:/apptest/MedexHealing/app/src/main/res/layout/sleep_info_list_item.xml" value="0.36666666666666664" />
         <entry key="app/src/main/res/layout/activity_pairing.xml" value="0.4779190722509105" />
       </map>
     </option>
+  </component>
+  <component name="EntryPointsManager">
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="retrofit2.http.FormUrlEncoded" />
+    </list>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />

@@ -48,27 +48,16 @@
         android:fontFamily="@font/nsr"
         android:text="확인" />
 
-    <TextView
-        android:id="@+id/findpass"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_below="@+id/succ_btn"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="10dp"
-        android:background="@drawable/recborder" />
-
     <Button
         android:id="@+id/gotologin_btn"
+        style="@style/titleText4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/findpass"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
         android:backgroundTint="@color/main_green"
+        android:layout_below="@+id/succ_btn"
+        android:layout_marginTop="360dp"
+        android:layout_marginLeft="130dp"
         android:text="로그인 화면으로"
-        style="@style/titleText4"
         android:textColor="@color/black" />
 
 

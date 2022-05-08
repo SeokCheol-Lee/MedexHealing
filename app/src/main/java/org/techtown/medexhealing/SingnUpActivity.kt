@@ -31,7 +31,6 @@ class SingnUpActivity : AppCompatActivity() {
         var registerService = retrofit.create(RegisterService::class.java)
 
         rgbinding.btnSignup.setOnClickListener{
-            var sir = rgbinding.etSiralnum.text.toString()
             var uid = rgbinding.etId.text.toString()
             var upw = rgbinding.etPw.text.toString()
             var upc = rgbinding.etCheckpw.text.toString()
@@ -49,9 +48,9 @@ class SingnUpActivity : AppCompatActivity() {
             }
 
             if(!isExistBlack && isPWSame){
-                Log.d("Main","serial: $sir id: $uid, pw: $upw, phone: $uph")
+                Log.d("Main"," id: $uid, pw: $upw, phone: $uph")
 
-                registerService.requestRegister(sir,uid,upw,uph).enqueue(object: Callback<Register> {
+                registerService.requestRegister(uid,upw,uph).enqueue(object: Callback<Register> {
 
                     override fun onResponse(call: Call<Register>, response: Response<Register>) {
                         val register = response.body()

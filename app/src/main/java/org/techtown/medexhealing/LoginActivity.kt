@@ -7,7 +7,6 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AlertDialog
 import org.techtown.medexhealing.databinding.ActivityLoginBinding
-import org.techtown.medexhealing.databinding.ActivityMainBinding
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -57,11 +56,6 @@ class LoginActivity : AppCompatActivity() {
             else if(upw.isEmpty()){
                 dialog.setTitle("로그인 실패")
                 dialog.setMessage("비밀번호를 입력하세요")
-                dialog.show()
-            }
-            else{
-                dialog.setTitle("에러")
-                dialog.setMessage("로그인에 실패하였습니다")
                 dialog.show()
             }
 
