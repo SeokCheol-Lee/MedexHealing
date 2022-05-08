@@ -37,6 +37,7 @@ class SingnUpActivity : AppCompatActivity() {
             var upc = rgbinding.etCheckpw.text.toString()
             var uph = rgbinding.etPhonenum.text.toString()
             var dialog = AlertDialog.Builder(this@SingnUpActivity)
+            val intent = Intent(this@SingnUpActivity,LoginActivity::class.java)
 
             if(uid.isEmpty()||upw.isEmpty()||uph.isEmpty()||upc.isEmpty()){
                 isExistBlack = true
@@ -55,12 +56,15 @@ class SingnUpActivity : AppCompatActivity() {
                     override fun onResponse(call: Call<Register>, response: Response<Register>) {
                         val register = response.body()
                         Log.d("회원가입 성공","msg : "+register?.msg)
-                        Log.d("회원가입 성공","msg : "+register?.code)
-                        dialog.setTitle(register?.msg)
-                        dialog.setMessage(register?.code)
+                        Log.d("회원가입 성공","code : "+register?.code)
+                        dialog.setTitle("회원가입 성공")
+                        dialog.setMessage(register?.msg)
                         dialog.show()
-                        val intent = Intent(this@SingnUpActivity,LoginActivity::class.java)
-                        startActivity(intent)
+
+                        if(register?.code == 100){
+                            Log.d("회원가입 성공","intent성공")
+                            startActivity(intent)
+                        }
 
                     }
 

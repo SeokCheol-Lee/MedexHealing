@@ -82,22 +82,17 @@ class LoginActivity : AppCompatActivity() {
                     val login = response.body()
                     var dialog = AlertDialog.Builder(this@LoginActivity)
 
+                    Log.d("로그인 연결 성공","msg : "+login?.msg)
+                    Log.d("로그인 연결 성공","code : "+login?.code)
+                    dialog.setTitle("로그인 성공")
+                    dialog.setMessage(login?.msg)
+                    dialog.show()
 
                     if(login?.code == 100){
-                        Log.d("로그인 성공","msg : "+login?.msg)
-                        Log.d("로그인 성공","msg : "+login?.code)
-                        dialog.setTitle(login?.msg)
-                        dialog.setMessage(login?.code)
-                        dialog.show()
+                        Log.d("로그인 성공","intent성공")
                         startActivity(intent)
                     }
-                    else {
-                        Log.d("존재하지 않는 아이디","msg : "+login?.msg)
-                        Log.d("존재하지 않는 아이디","msg : "+login?.code)
-                        dialog.setTitle("로그인 실패")
-                        dialog.setMessage("존재하지 않는 아이디입니다")
-                        dialog.show()
-                    }
+
 
                 }
             })
