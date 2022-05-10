@@ -9,7 +9,7 @@ import retrofit2.http.POST
 interface RegisterService {
 
     @FormUrlEncoded
-    @POST("app_list/app1")
+    @POST("app_list/sign_up")
     fun requestRegister(
         @Field("userid") userid:String,
         @Field("userpw") userpw:String,

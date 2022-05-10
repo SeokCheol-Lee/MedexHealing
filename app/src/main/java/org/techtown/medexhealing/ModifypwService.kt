@@ -8,7 +8,7 @@ import retrofit2.http.POST
 interface ModifypwService {
 
     @FormUrlEncoded
-    @POST("app_list/app1")
+    @POST("app_list/pw_2")
     fun requestModifypw(
         @Field("modifypw") modifypw:String
     ) : Call<Modifypw>
