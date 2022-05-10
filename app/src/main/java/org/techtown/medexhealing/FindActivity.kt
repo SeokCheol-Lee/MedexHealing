@@ -21,7 +21,7 @@ class FindActivity : AppCompatActivity() {
         setContentView(fnbinding.root)
 
         var retrofit = Retrofit.Builder()
-            .baseUrl("http://220.149.236.48:3001/")
+            .baseUrl("http://220.149.244.199:3001/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
