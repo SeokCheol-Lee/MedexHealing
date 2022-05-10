@@ -10,7 +10,7 @@ import retrofit2.http.POST
 interface LoginService {
 
     @FormUrlEncoded
-    @POST("app_list/app1")
+    @POST("app_list/sign_in")
     fun requestLogin(
         @Field("userid") userid:String,
         @Field("userpw") userpw:String

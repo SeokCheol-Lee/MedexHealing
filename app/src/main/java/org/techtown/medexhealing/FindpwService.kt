@@ -8,7 +8,7 @@ import retrofit2.http.POST
 interface FindpwService {
 
     @FormUrlEncoded
-    @POST("app_list/app1")
+    @POST("app_list/pw_1")
     fun requestFindpw(
         @Field("userph") userph:String
     ) : Call<Findpw>

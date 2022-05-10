@@ -5,8 +5,11 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import org.techtown.medexhealing.databinding.ActivityLoginBinding
+import org.techtown.medexhealing.databinding.ActivityMainBinding
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -19,6 +22,16 @@ class LoginActivity : AppCompatActivity() {
 
         val lgbinding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(lgbinding.root)
+
+        if(lgbinding.autologin.isChecked){
+
+            // SharedPreferences 안에 값이 저장되어 있을 때 -> MainActivity로 이동
+            //Toast.makeText(this, "${MySharedPreferences.getUserId(this)}님 자동 로그인 되었습니다.", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
 
         lgbinding.fdpass.setOnClickListener {
             val intent = Intent(this,FindActivity::class.java)
@@ -58,6 +71,11 @@ class LoginActivity : AppCompatActivity() {
                 dialog.setMessage("비밀번호를 입력하세요")
                 dialog.show()
             }
+            else{
+                dialog.setTitle("에러")
+                dialog.setMessage("로그인에 실패하였습니다")
+                dialog.show()
+            }
 
             //startActivity(intent)
 
@@ -76,17 +94,25 @@ class LoginActivity : AppCompatActivity() {
                     val login = response.body()
                     var dialog = AlertDialog.Builder(this@LoginActivity)
 
-                    Log.d("로그인 연결 성공","msg : "+login?.msg)
-                    Log.d("로그인 연결 성공","code : "+login?.code)
-                    dialog.setTitle("로그인 성공")
-                    dialog.setMessage(login?.msg)
-                    dialog.show()
 
                     if(login?.code == 100){
-                        Log.d("로그인 성공","intent성공")
+                        Log.d("로그인 성공","msg : "+login?.msg)
+                        Log.d("로그인 성공","msg : "+login?.code)
+                        MySharedPreferences.setUserId(this@LoginActivity,lgbinding.etLoginid.toString())
+                        MySharedPreferences.setUserPass(this@LoginActivity,lgbinding.etLoginpw.toString())
+                        dialog.setTitle(login?.msg)
+                        dialog.setMessage(login?.code)
+                        dialog.show()
                         startActivity(intent)
+                        finish()
                     }
-
+                    else {
+                        Log.d("존재하지 않는 아이디","msg : "+login?.msg)
+                        Log.d("존재하지 않는 아이디","msg : "+login?.code)
+                        dialog.setTitle("로그인 실패")
+                        dialog.setMessage("존재하지 않는 아이디입니다")
+                        dialog.show()
+                    }
 
                 }
             })
@@ -95,6 +121,5 @@ class LoginActivity : AppCompatActivity() {
 
 
     }
-
 
 }
