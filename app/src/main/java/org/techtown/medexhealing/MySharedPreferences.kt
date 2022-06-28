@@ -30,6 +30,16 @@ object MySharedPreferences {
         val prefs : SharedPreferences = context.getSharedPreferences(MY_ACCOUNT, Context.MODE_PRIVATE)
         return prefs.getString("MY_PASS", "").toString()
     }
+    fun setUserCheck(context: Context, input: Boolean) {
+        val prefs : SharedPreferences = context.getSharedPreferences(MY_ACCOUNT, Context.MODE_PRIVATE)
+        val editor : SharedPreferences.Editor = prefs.edit()
+        editor.putBoolean("MY_CHECK", input)
+        editor.commit()
+    }
+    fun getUserCheck(context: Context) : Boolean{
+        val prefs : SharedPreferences = context.getSharedPreferences(MY_ACCOUNT, Context.MODE_PRIVATE)
+        return prefs.getBoolean("MY_CHECK", false)
+    }
     fun removeUser(context: Context) {
         val prefs : SharedPreferences = context.getSharedPreferences(MY_ACCOUNT, Context.MODE_PRIVATE)
         val editor : SharedPreferences.Editor = prefs.edit()
