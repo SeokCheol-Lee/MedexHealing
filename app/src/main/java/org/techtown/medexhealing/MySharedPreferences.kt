@@ -2,6 +2,7 @@ package org.techtown.medexhealing
 
 import android.content.Context
 import android.content.SharedPreferences
+import retrofit2.Callback
 
 object MySharedPreferences {
     private val MY_ACCOUNT : String = "account"
@@ -28,6 +29,13 @@ object MySharedPreferences {
     fun getUserPass(context: Context): String {
         val prefs : SharedPreferences = context.getSharedPreferences(MY_ACCOUNT, Context.MODE_PRIVATE)
         return prefs.getString("MY_PASS", "").toString()
+    }
+    fun removeUser(context: Context) {
+        val prefs : SharedPreferences = context.getSharedPreferences(MY_ACCOUNT, Context.MODE_PRIVATE)
+        val editor : SharedPreferences.Editor = prefs.edit()
+        editor.remove("MY_ID")
+        editor.remove("MY_PASS")
+        editor.commit()
     }
 
     fun clearUser(context: Context) {
