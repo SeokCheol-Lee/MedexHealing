@@ -67,7 +67,7 @@ class LoginActivity : AppCompatActivity() {
                         Log.d("로그인 성공","msg : "+login?.msg)
                         Log.d("로그인 성공","code : "+login?.code)
                         MySharedPreferences.setUserId(this@LoginActivity,uid)
-                        MySharedPreferences.setUserId(this@LoginActivity,upw)
+                        MySharedPreferences.setUserPass(this@LoginActivity,upw)
                         startActivity(intent)
                         finish()
                     }
