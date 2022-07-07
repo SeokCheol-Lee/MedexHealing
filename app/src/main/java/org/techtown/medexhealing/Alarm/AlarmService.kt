@@ -10,6 +10,7 @@ interface AlarmService {
     @FormUrlEncoded
     @POST("app_list/wake_up_check")
     fun requestalarm(
+        @Field("SID") sid:String,
         @Field("wake_up") wakeup:String
     ) : Call<Alarm>
 }

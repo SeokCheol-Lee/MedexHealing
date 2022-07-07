@@ -14,10 +14,8 @@ import android.os.Build
 import android.util.Log
 import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
+import org.techtown.medexhealing.*
 import org.techtown.medexhealing.Alarm.Alarm
-import org.techtown.medexhealing.Login
-import org.techtown.medexhealing.LoginService
-import org.techtown.medexhealing.R
 import org.techtown.medexhealing.databinding.ActivityAlarmBinding
 import org.techtown.medexhealing.databinding.ActivitySplashBinding
 import retrofit2.Callback
@@ -28,10 +26,11 @@ class NotificationHelper(base: Context?) : ContextWrapper(base){
     private val channelID = "channelID"
     private val channelNm = "channelNm"
     val mediaPlayer = MediaPlayer.create(this,R.raw.mi)
-    val intent: Intent = Intent(this, ActivitySplashBinding::class.java).apply {
-        Intent.FLAG_ACTIVITY_CLEAR_TASK
+    val intent = Intent(this, AlarmActivity::class.java).apply {
+        flags = Intent.FLAG_ACTIVITY_NEW_TASK
     }
-    val pendingIntent: PendingIntent = PendingIntent.getActivity(this,0, intent, 0)
+    val pendingIntent: PendingIntent = PendingIntent.getActivity(this,0,intent,0)
+
 
     init{
         if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.O){
@@ -67,6 +66,7 @@ class NotificationHelper(base: Context?) : ContextWrapper(base){
             .setAutoCancel(true)
             .setContentIntent(pendingIntent)
     }
+
 
 }
 
