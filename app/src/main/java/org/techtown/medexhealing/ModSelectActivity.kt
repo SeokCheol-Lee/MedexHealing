@@ -7,6 +7,10 @@ import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.google.android.material.tabs.TabLayoutMediator
+import org.techtown.medexhealing.Fragment.Modfragment1
+import org.techtown.medexhealing.Fragment.Modfragment2
+import org.techtown.medexhealing.Fragment.Modfragment3
+import org.techtown.medexhealing.Fragment.Modfragment4
 import org.techtown.medexhealing.databinding.ActivityModSelectBinding
 
 class ModSelectActivity : AppCompatActivity() {
@@ -15,7 +19,8 @@ class ModSelectActivity : AppCompatActivity() {
         val msbinding = ActivityModSelectBinding.inflate(layoutInflater)
         setContentView(msbinding.root)
 
-        val list = listOf(Modfragment1(),Modfragment2(),Modfragment3(),Modfragment4())
+        //val list = listOf(Modfragment1(),Modfragment2(),Modfragment3(),Modfragment4())
+        val list = listOf(Modfragment1(), Modfragment2(), Modfragment3(), Modfragment4())
 
         val pagerAdapter = FragmentPagerAdapter(list, this)
 
