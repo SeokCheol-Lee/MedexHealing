@@ -1,16 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Modfragment4">
+    android:layout_height="360dp">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ImageButton
+        android:id="@+id/btn_headup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="사용자모드입니다" />
+        android:background="@drawable/ic_baseline_arrow_circle_up_24"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="60dp"/>
+    <ImageButton
+        android:id="@+id/btn_headdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_baseline_arrow_circle_down_24"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="150dp"/>
+    <ImageButton
+        android:id="@+id/btn_legup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_baseline_arrow_circle_up_24"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60dp"/>
+    <ImageButton
+        android:id="@+id/btn_legdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_baseline_arrow_circle_down_24"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="150dp"/>
+    <ImageButton
+        android:id="@+id/btn_temup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_baseline_arrow_circle_up_24"
+        android:layout_marginStart="280dp"
+        android:layout_marginTop="60dp"/>
+    <ImageButton
+        android:id="@+id/btn_temdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_baseline_arrow_circle_down_24"
+        android:layout_marginStart="280dp"
+        android:layout_marginTop="150dp"/>
+
 
 
 </FrameLayout>

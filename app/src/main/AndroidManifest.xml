@@ -11,7 +11,7 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
-    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
 
     <application
         android:allowBackup="true"
@@ -21,6 +21,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MedexHealing"
         android:usesCleartextTraffic="true">
+        <activity
+            android:name=".AlarmOpen"
+            android:exported="false" />
         <activity
             android:name=".AlarmActivity"
             android:exported="false" />
@@ -99,7 +102,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <receiver android:name="com.example.alarmpr.AlertReceiver"/>
+
+        <receiver android:name="com.example.alarmpr.AlertReceiver" />
     </application>
 
 </manifest>

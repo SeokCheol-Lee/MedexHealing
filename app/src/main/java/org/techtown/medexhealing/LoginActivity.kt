@@ -8,8 +8,6 @@ import android.util.Log
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import org.techtown.medexhealing.databinding.ActivityLoginBinding
-import org.techtown.medexhealing.databinding.ActivityMainBinding
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -20,7 +18,7 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val lgbinding = ActivityLoginBinding.inflate(layoutInflater)
+        val lgbinding = org.techtown.medexhealing.databinding.ActivityLoginBinding.inflate(layoutInflater)
         setContentView(lgbinding.root)
 
         lgbinding.fdpass.setOnClickListener {

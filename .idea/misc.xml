@@ -3,8 +3,23 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/User/Desktop/app workspace/MedexHealing/app/src/main/res/drawable/ic_baseline_access_alarm_24.xml" value="0.3505" />
+        <entry key="..\:/Users/User/Desktop/app workspace/MedexHealing/app/src/main/res/drawable/ic_baseline_arrow_circle_up_24.xml" value="0.1935" />
         <entry key="..\:/Users/User/Desktop/app workspace/MedexHealing/app/src/main/res/layout/activity_alarm.xml" value="0.23489583333333333" />
+        <entry key="..\:/Users/User/Desktop/app workspace/MedexHealing/app/src/main/res/layout/activity_alarm_open.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/User/Desktop/app workspace/MedexHealing/app/src/main/res/layout/activity_change_info.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/User/Desktop/app workspace/MedexHealing/app/src/main/res/layout/activity_find.xml" value="0.3619791666666667" />
         <entry key="..\:/Users/User/Desktop/app workspace/MedexHealing/app/src/main/res/layout/activity_login.xml" value="0.2722222222222222" />
+        <entry key="..\:/Users/User/Desktop/app workspace/MedexHealing/app/src/main/res/layout/activity_mod_select.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/User/Desktop/app workspace/MedexHealing/app/src/main/res/layout/activity_pairing.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/User/Desktop/app workspace/MedexHealing/app/src/main/res/layout/activity_provision.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/User/Desktop/app workspace/MedexHealing/app/src/main/res/layout/activity_singn_up.xml" value="0.24947916666666667" />
+        <entry key="..\:/Users/User/Desktop/app workspace/MedexHealing/app/src/main/res/layout/activity_splash.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/User/Desktop/app workspace/MedexHealing/app/src/main/res/layout/activity_user_info.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/User/Desktop/app workspace/MedexHealing/app/src/main/res/layout/fragment_modfragment2.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/User/Desktop/app workspace/MedexHealing/app/src/main/res/layout/fragment_modfragment3.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/User/Desktop/app workspace/MedexHealing/app/src/main/res/layout/fragment_modfragment4.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/User/Desktop/app workspace/MedexHealing/app/src/main/res/layout/sleep_info_list_item.xml" value="0.3619791666666667" />
         <entry key="..\:/apptest/MedexHealing/app/src/main/res/drawable/recborder.xml" value="0.3828125" />
         <entry key="..\:/apptest/MedexHealing/app/src/main/res/layout/activity_alarm_plus.xml" value="0.36666666666666664" />
         <entry key="..\:/apptest/MedexHealing/app/src/main/res/layout/activity_change_info.xml" value="0.36666666666666664" />
@@ -30,9 +45,7 @@
         <entry key="..\:/apptest/MedexHealing/app/src/main/res/layout/list_item.xml" value="0.36666666666666664" />
         <entry key="..\:/apptest/MedexHealing/app/src/main/res/layout/modifypw.xml" value="0.36666666666666664" />
         <entry key="..\:/apptest/MedexHealing/app/src/main/res/layout/sleep_info_list_item.xml" value="0.36666666666666664" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.2453125" />
         <entry key="app/src/main/res/layout/activity_pairing.xml" value="0.4779190722509105" />
-        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.25791015625" />
       </map>
     </option>
   </component>

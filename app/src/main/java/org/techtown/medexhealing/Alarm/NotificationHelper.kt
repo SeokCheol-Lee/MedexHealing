@@ -26,7 +26,7 @@ class NotificationHelper(base: Context?) : ContextWrapper(base){
     private val channelID = "channelID"
     private val channelNm = "channelNm"
     val mediaPlayer = MediaPlayer.create(this,R.raw.mi)
-    val intent = Intent(this, AlarmActivity::class.java).apply {
+    val intent = Intent(this, AlarmOpen::class.java).apply {
         flags = Intent.FLAG_ACTIVITY_NEW_TASK
     }
     val pendingIntent: PendingIntent = PendingIntent.getActivity(this,0,intent,0)
