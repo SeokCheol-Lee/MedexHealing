@@ -20,6 +20,8 @@ class LoginActivity : AppCompatActivity() {
 
         val lgbinding = org.techtown.medexhealing.databinding.ActivityLoginBinding.inflate(layoutInflater)
         setContentView(lgbinding.root)
+        var name: String = "홍길동"
+        var serial: String = "0000"
 
         lgbinding.fdpass.setOnClickListener {
             val intent = Intent(this,FindActivity::class.java)
@@ -65,8 +67,14 @@ class LoginActivity : AppCompatActivity() {
                     if(login?.code == 200){
                         Log.d("로그인 성공","msg : "+login?.msg)
                         Log.d("로그인 성공","code : "+login?.code)
+                        Log.d("로그인 성공","name : "+login?.name)
+                        Log.d("로그인 성공","serial : "+login?.serial)
                         MySharedPreferences.setUserId(this@LoginActivity,uid)
                         MySharedPreferences.setUserPass(this@LoginActivity,upw)
+                        name = login.name
+                        serial = login.serial
+                        MySharedPreferences.setUserName(this@LoginActivity, name)
+                        MySharedPreferences.setUserSerial(this@LoginActivity, serial)
                         startActivity(intent)
                         finish()
                     }
@@ -132,6 +140,12 @@ class LoginActivity : AppCompatActivity() {
                     if(login?.code == 200){
                         Log.d("로그인 성공","msg : "+login?.msg)
                         Log.d("로그인 성공","code : "+login?.code)
+                        Log.d("로그인 성공","name : "+login?.name)
+                        Log.d("로그인 성공","serial : "+login?.serial)
+                        name = login.name
+                        serial = login.serial
+                        MySharedPreferences.setUserName(this@LoginActivity, name)
+                        MySharedPreferences.setUserSerial(this@LoginActivity, serial)
                         startActivity(intent)
                         finish()
                     }

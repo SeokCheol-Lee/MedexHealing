@@ -13,6 +13,10 @@ class HomeActivity : AppCompatActivity() {
         val hmbinding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(hmbinding.root)
 
+        var name = MySharedPreferences.getUserName(this)
+
+        hmbinding.tvHome.setText("안녕하세요"+name+"님 :)")
+
 
         hmbinding.btnModselect.setOnClickListener{
             val msintent = Intent(this, ModSelectActivity::class.java)

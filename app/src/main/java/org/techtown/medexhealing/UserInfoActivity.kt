@@ -13,11 +13,9 @@ class UserInfoActivity : AppCompatActivity() {
         val uibinding = ActivityUserInfoBinding.inflate(layoutInflater)
         setContentView(uibinding.root)
 
-        if (intent.hasExtra("uiname")){
-            uibinding.tvUsname.setText(intent.getStringExtra("uiname") + "님")
-        }else{
-            Toast.makeText(this,"Error!", Toast.LENGTH_LONG).show()
-        }
+        var name = MySharedPreferences.getUserName(this)
+        uibinding.tvUsname.setText(name+"님")
+
         uibinding.btnAlarmSetting.setOnClickListener{
             val alarmintent: Intent = Intent(this,AlarmActivity::class.java)
             startActivity(alarmintent)

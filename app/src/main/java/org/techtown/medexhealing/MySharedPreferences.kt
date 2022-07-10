@@ -36,6 +36,27 @@ object MySharedPreferences {
         editor.putBoolean("MY_CHECK", input)
         editor.commit()
     }
+    fun setUserName(context: Context, input: String){
+        val prefs : SharedPreferences = context.getSharedPreferences(MY_ACCOUNT, Context.MODE_PRIVATE)
+        val editor : SharedPreferences.Editor = prefs.edit()
+        editor.putString("MY_NAME", input)
+        editor.commit()
+    }
+    fun getUserName(context: Context): String {
+        val prefs : SharedPreferences = context.getSharedPreferences(MY_ACCOUNT, android.content.Context.MODE_PRIVATE)
+        return prefs.getString("MY_NAME", "").toString()
+    }
+    fun setUserSerial(context: Context, input: String){
+        val prefs : SharedPreferences = context.getSharedPreferences(MY_ACCOUNT, Context.MODE_PRIVATE)
+        val editor : SharedPreferences.Editor = prefs.edit()
+        editor.putString("MY_SERIAL", input)
+        editor.commit()
+    }
+    fun getUserSerial(context: Context): String {
+        val prefs : SharedPreferences = context.getSharedPreferences(MY_ACCOUNT, android.content.Context.MODE_PRIVATE)
+        return prefs.getString("MY_SERIAL", "").toString()
+    }
+
     fun getUserCheck(context: Context) : Boolean{
         val prefs : SharedPreferences = context.getSharedPreferences(MY_ACCOUNT, Context.MODE_PRIVATE)
         return prefs.getBoolean("MY_CHECK", false)
@@ -45,6 +66,8 @@ object MySharedPreferences {
         val editor : SharedPreferences.Editor = prefs.edit()
         editor.remove("MY_ID")
         editor.remove("MY_PASS")
+        editor.remove("MY_NAME")
+        editor.remove("MY_SERIAL")
         editor.commit()
     }
 
