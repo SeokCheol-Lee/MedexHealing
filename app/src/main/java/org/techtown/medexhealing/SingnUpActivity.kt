@@ -19,6 +19,7 @@ class SingnUpActivity : AppCompatActivity() {
 
         var isExistBlack = false
         var isPWSame = false
+        var isCheck = false
 
         val rgbinding = ActivitySingnUpBinding.inflate(layoutInflater)
         setContentView(rgbinding.root)
@@ -35,22 +36,25 @@ class SingnUpActivity : AppCompatActivity() {
             var upw = rgbinding.etPw.text.toString()
             var upc = rgbinding.etCheckpw.text.toString()
             var uph = rgbinding.etPhonenum.text.toString()
+            var usn = rgbinding.etSerialnum.text.toString()
             var dialog = AlertDialog.Builder(this@SingnUpActivity)
             val intent = Intent(this@SingnUpActivity,LoginActivity::class.java)
 
-            if(uid.isEmpty()||upw.isEmpty()||uph.isEmpty()||upc.isEmpty()){
+            if(uid.isEmpty()||upw.isEmpty()||uph.isEmpty()||upc.isEmpty()||usn.isEmpty()){
                 isExistBlack = true
             }
-            else{
-                if(upw == upc){
+            else if(upw == upc){
                     isPWSame = true
                 }
+            else if(rgbinding.checkBox.isChecked){
+                isCheck = true
             }
 
-            if(!isExistBlack && isPWSame){
-                Log.d("Main"," id: $uid, pw: $upw, phone: $uph")
 
-                registerService.requestRegister(uid,upw,uph).enqueue(object: Callback<Register> {
+            if(!isExistBlack && isPWSame && isCheck){
+                Log.d("Main"," id: $uid, pw: $upw, phone: $uph, serial: $usn")
+
+                registerService.requestRegister(uid,upw,uph,usn).enqueue(object: Callback<Register> {
 
                     override fun onResponse(call: Call<Register>, response: Response<Register>) {
                         val register = response.body()
@@ -83,6 +87,9 @@ class SingnUpActivity : AppCompatActivity() {
                 else if(!isPWSame){
                     dialog("not same")
                 }
+                else if(!isCheck){
+                    dialog("not check")
+                }
 
             }
 
@@ -100,6 +107,10 @@ class SingnUpActivity : AppCompatActivity() {
         else if(type.equals("not same")){
             dialog.setTitle("회원가입 실패")
             dialog.setMessage("비밀번호가 다릅니다")
+        }
+        else if(type.equals("not check")){
+            dialog.setTitle("회원가입 실패")
+            dialog.setMessage("약관에 동의해주세요")
         }
 
         val dialog_listener = object: DialogInterface.OnClickListener{

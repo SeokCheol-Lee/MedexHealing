@@ -13,6 +13,7 @@ interface RegisterService {
     fun requestRegister(
         @Field("userid") userid:String,
         @Field("userpw") userpw:String,
-        @Field("userph") userph:String
+        @Field("userph") userph:String,
+        @Field("usersn") usersn:String
     ) : Call<Register>
 }

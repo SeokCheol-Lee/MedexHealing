@@ -11,11 +11,28 @@
 
 
     <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="279dp"
+        android:fontFamily="@font/nsr"
+        android:text="시리얼 번호"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_phonenum" />
+
+    <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="124dp"
+        android:layout_marginTop="52dp"
         android:layout_marginEnd="310dp"
         android:fontFamily="@font/nsr"
         android:text="아이디"
@@ -32,6 +49,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="310dp"
         android:fontFamily="@font/nsr"
         android:text="비밀번호"
@@ -44,26 +62,26 @@
         app:layout_constraintTop_toBottomOf="@+id/et_id" />
 
     <EditText
-        android:inputType="textPassword"
         android:id="@+id/et_pw"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="3dp"
         android:layout_marginEnd="50dp"
+        android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <EditText
-        android:inputType="textPassword"
         android:id="@+id/et_checkpw"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="17dp"
+        android:layout_marginTop="3dp"
         android:layout_marginEnd="50dp"
+        android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -71,23 +89,35 @@
 
     <EditText
         android:id="@+id/et_phonenum"
-        android:inputType="phone"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="3dp"
         android:layout_marginEnd="50dp"
+        android:inputType="phone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <EditText
+        android:id="@+id/et_serialnum"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView25" />
 
     <TextView
         android:id="@+id/passwordcheck"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="21dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="279dp"
         android:fontFamily="@font/nsr"
         android:text="비밀번호 확인"
@@ -103,7 +133,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="279dp"
         android:fontFamily="@font/nsr"
         android:text="휴대전화 번호"
@@ -114,20 +144,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_checkpw" />
 
+
     <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="70dp"
-        android:text="약관"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="148dp"
         android:fontFamily="@font/nsr"
+        android:text="약관"
         android:textColor="@color/white"
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
-
 
     <Button
         android:id="@+id/btn_signup"
@@ -165,7 +195,7 @@
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="3dp"
         android:layout_marginEnd="50dp"
         android:background="@drawable/recborder"
         android:ems="10"
