@@ -68,11 +68,11 @@ class LoginActivity : AppCompatActivity() {
                         Log.d("로그인 성공","msg : "+login?.msg)
                         Log.d("로그인 성공","code : "+login?.code)
                         Log.d("로그인 성공","name : "+login?.name)
-                        Log.d("로그인 성공","serial : "+login?.serial)
+                        Log.d("로그인 성공","serial : "+login?.serialnum)
                         MySharedPreferences.setUserId(this@LoginActivity,uid)
                         MySharedPreferences.setUserPass(this@LoginActivity,upw)
                         name = login.name
-                        serial = login.serial
+                        serial = login.serialnum
                         MySharedPreferences.setUserName(this@LoginActivity, name)
                         MySharedPreferences.setUserSerial(this@LoginActivity, serial)
                         startActivity(intent)
@@ -141,9 +141,9 @@ class LoginActivity : AppCompatActivity() {
                         Log.d("로그인 성공","msg : "+login?.msg)
                         Log.d("로그인 성공","code : "+login?.code)
                         Log.d("로그인 성공","name : "+login?.name)
-                        Log.d("로그인 성공","serial : "+login?.serial)
+                        Log.d("로그인 성공","serial : "+login?.serialnum)
                         name = login.name
-                        serial = login.serial
+                        serial = login.serialnum
                         MySharedPreferences.setUserName(this@LoginActivity, name)
                         MySharedPreferences.setUserSerial(this@LoginActivity, serial)
                         startActivity(intent)

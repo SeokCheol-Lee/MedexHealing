@@ -8,7 +8,7 @@ import retrofit2.http.POST
 
 interface ControlService {
     @FormUrlEncoded
-    @POST("app_list/wake_up_check")
+    @POST("angle")
     fun requestcon(
         @Field("serialnum") serialnum:String,
         @Field("btnnum") btnnum:String

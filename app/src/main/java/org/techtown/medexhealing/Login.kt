@@ -4,5 +4,5 @@ data class Login(
     var code: Int,
     var msg: String,
     var name: String,
-    var serial: String
+    var serialnum: String
 )

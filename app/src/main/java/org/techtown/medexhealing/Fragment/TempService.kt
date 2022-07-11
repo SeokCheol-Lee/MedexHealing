@@ -7,7 +7,7 @@ import retrofit2.http.POST
 
 interface TempService {
     @FormUrlEncoded
-    @POST("app_list/wake_up_check")
+    @POST("mat_control")
     fun requesttempcon(
         @Field("serialnum") serialnum:String,
         @Field("btnnum") btnnum:String

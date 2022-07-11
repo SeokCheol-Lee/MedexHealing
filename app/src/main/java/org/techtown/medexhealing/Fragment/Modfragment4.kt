@@ -8,8 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.databinding.DataBindingUtil
-import org.techtown.medexhealing.FindpwService
-import org.techtown.medexhealing.R
+import org.techtown.medexhealing.*
 import org.techtown.medexhealing.databinding.FragmentModfragment4Binding
 import retrofit2.Call
 import retrofit2.Callback
@@ -41,7 +40,13 @@ class Modfragment4 : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
-        val serial = "321"
+
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        var serial = MySharedPreferences.getUserSerial(requireContext())
+
         var retrofit = Retrofit.Builder()
             .baseUrl("http://220.149.244.199:3001/")
             .addConverterFactory(GsonConverterFactory.create())
@@ -58,7 +63,7 @@ class Modfragment4 : Fragment() {
                 }
 
                 override fun onFailure(call: Call<Modecon>, t: Throwable) {
-                    TODO("Not yet implemented")
+                    Log.d("베드조작 실패 legup","${t.localizedMessage}")
                 }
 
             })
@@ -74,7 +79,7 @@ class Modfragment4 : Fragment() {
                 }
 
                 override fun onFailure(call: Call<Modecon>, t: Throwable) {
-                    TODO("Not yet implemented")
+                    Log.d("베드조작 실패 legdown","${t.localizedMessage}")
                 }
 
             })
@@ -89,7 +94,7 @@ class Modfragment4 : Fragment() {
                 }
 
                 override fun onFailure(call: Call<Modecon>, t: Throwable) {
-                    TODO("Not yet implemented")
+                    Log.d("베드조작 실패 headup","${t.localizedMessage}")
                 }
             })
         }
@@ -103,7 +108,7 @@ class Modfragment4 : Fragment() {
                 }
 
                 override fun onFailure(call: Call<Modecon>, t: Throwable) {
-                    TODO("Not yet implemented")
+                    Log.d("베드조작 실패 headdown","${t.localizedMessage}")
                 }
 
             })
@@ -111,6 +116,7 @@ class Modfragment4 : Fragment() {
         var tempservice = retrofit.create(TempService::class.java)
         binding.btnTemup.setOnClickListener {
             val btnnum = "Tempup"
+            val mod = ModSelectActivity()
             tempservice.requesttempcon(serial, btnnum).enqueue(object : Callback<Tempcon>{
                 override fun onResponse(call: Call<Tempcon>, response: Response<Tempcon>) {
                     val rep = response.body()
@@ -118,16 +124,18 @@ class Modfragment4 : Fragment() {
                     Log.d("베드조작 성공 tempup","msg : "+rep?.msg)
                     Log.d("베드조작 성공 tempup","code : "+rep?.code)
                     temp = rep?.temp
+                    mod.changeTextView("$temp°C")
                 }
 
                 override fun onFailure(call: Call<Tempcon>, t: Throwable) {
-                    TODO("Not yet implemented")
+                    Log.d("베드조작 실패 tempup","${t.localizedMessage}")
                 }
 
             })
         }
         binding.btnTemdown.setOnClickListener {
             val btnnum = "Tempdown"
+            val mod = ModSelectActivity()
             tempservice.requesttempcon(serial, btnnum).enqueue(object : Callback<Tempcon>{
                 override fun onResponse(call: Call<Tempcon>, response: Response<Tempcon>) {
                     val rep = response.body()
@@ -135,10 +143,11 @@ class Modfragment4 : Fragment() {
                     Log.d("베드조작 성공 tempdown","msg : "+rep?.msg)
                     Log.d("베드조작 성공 tempdown","code : "+rep?.code)
                     temp = rep?.temp
+                    mod.changeTextView("$temp°C")
                 }
 
                 override fun onFailure(call: Call<Tempcon>, t: Throwable) {
-                    TODO("Not yet implemented")
+                    Log.d("베드조작 실패 tempdown","${t.localizedMessage}")
                 }
 
             })
@@ -146,9 +155,10 @@ class Modfragment4 : Fragment() {
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
+    ): View? {
         // Inflate the layout for this fragment
         //return inflater.inflate(R.layout.fragment_modfragment4, container, false)
         _binding = FragmentModfragment4Binding.inflate(inflater, container, false)

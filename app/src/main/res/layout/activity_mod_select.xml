@@ -7,12 +7,30 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".ModSelectActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="베드 온도"
+        android:fontFamily="@font/nsr"
+        android:layout_gravity="center"
+        android:layout_marginTop="36dp"
+        android:textSize="24dp"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/tv_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="32°C"
+        android:layout_gravity="center"
+        android:layout_marginTop="58dp"
+        android:textSize="48dp"/>
+
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tab_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="300dp">
+        android:layout_marginTop="120dp">
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
