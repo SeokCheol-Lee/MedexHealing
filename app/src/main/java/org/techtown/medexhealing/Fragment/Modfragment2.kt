@@ -1,11 +1,20 @@
 package org.techtown.medexhealing.Fragment
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import org.techtown.medexhealing.MySharedPreferences
 import org.techtown.medexhealing.R
+import org.techtown.medexhealing.databinding.FragmentModfragment2Binding
+import org.techtown.medexhealing.databinding.FragmentModfragment4Binding
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -21,6 +30,8 @@ class Modfragment2 : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    private var _binding: FragmentModfragment2Binding? = null
+    private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,13 +41,47 @@ class Modfragment2 : Fragment() {
         }
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        var serial = MySharedPreferences.getUserSerial(requireContext())
+
+        var retrofit = Retrofit.Builder()
+            .baseUrl("http://220.149.244.199:3001/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+
+        var controlservice = retrofit.create(ControlService::class.java)
+        binding.btnFlat.setOnClickListener {
+            val btnnum = "flat"
+            controlservice.requestcon(serial, btnnum).enqueue(object : Callback<Modecon> {
+                override fun onResponse(call: Call<Modecon>, response: Response<Modecon>) {
+                    val rep = response.body()
+                    Log.d("베드조작 성공 flat","msg : "+rep?.msg)
+                    Log.d("베드조작 성공 flat","code : "+rep?.code)
+                }
+
+                override fun onFailure(call: Call<Modecon>, t: Throwable) {
+                    Log.d("베드조작 실패 flat","${t.localizedMessage}")
+                }
+
+            })
+        }
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         //return inflater.inflate(R.layout.fragment_modfragment2, container, false)
-        return inflater.inflate(R.layout.fragment_modfragment2, container, false)
+        _binding = FragmentModfragment2Binding.inflate(inflater, container, false)
+        val view = binding.root
+        return view
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
     companion object {

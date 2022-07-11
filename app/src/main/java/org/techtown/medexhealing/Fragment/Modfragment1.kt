@@ -2,13 +2,18 @@ package org.techtown.medexhealing.Fragment
 
 import android.icu.lang.UCharacter.GraphemeClusterBreak.T
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import org.techtown.medexhealing.MySharedPreferences
 import org.techtown.medexhealing.R
 import org.techtown.medexhealing.databinding.FragmentModfragment1Binding
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
@@ -34,6 +39,32 @@ class Modfragment1 : Fragment() {
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
+        }
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        super.onViewCreated(view, savedInstanceState)
+        var serial = MySharedPreferences.getUserSerial(requireContext())
+
+        var retrofit = Retrofit.Builder()
+            .baseUrl("http://220.149.244.199:3001/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+        var controlservice = retrofit.create(ControlService::class.java)
+        binding.btnZg.setOnClickListener {
+            val btnnum = "zg"
+            controlservice.requestcon(serial, btnnum).enqueue(object : Callback<Modecon>{
+                override fun onResponse(call: Call<Modecon>, response: Response<Modecon>) {val rep = response.body()
+                    Log.d("베드조작 성공 zg","msg : "+rep?.msg)
+                    Log.d("베드조작 성공 zg","code : "+rep?.code)
+                }
+
+                override fun onFailure(call: Call<Modecon>, t: Throwable) {
+                    Log.d("베드조작 실패 zg","${t.localizedMessage}")
+                }
+
+            })
         }
     }
 
