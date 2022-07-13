@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.LayoutInflater
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import org.techtown.medexhealing.databinding.ActivityFindBinding
@@ -19,6 +20,7 @@ class FindActivity : AppCompatActivity() {
 
         val fnbinding = ActivityFindBinding.inflate(layoutInflater)
         setContentView(fnbinding.root)
+        val intent: Intent = Intent(this, LoginActivity::class.java)
 
         var retrofit = Retrofit.Builder()
             .baseUrl("http://220.149.244.199:3001/")
@@ -27,6 +29,7 @@ class FindActivity : AppCompatActivity() {
 
         var findpwService = retrofit.create(FindpwService::class.java)
         var modifypwService = retrofit.create(ModifypwService::class.java)
+        var mpw : String = "010"
 
         fnbinding.gotologinBtn.setOnClickListener {
             val intent = Intent(this,LoginActivity::class.java)
@@ -34,21 +37,17 @@ class FindActivity : AppCompatActivity() {
         }
         fnbinding.succBtn.setOnClickListener {
             var uph = fnbinding.ipphone.text.toString()
+            var uid = fnbinding.etFpid.text.toString()
             var dialog = AlertDialog.Builder(this@FindActivity)
             var mpdialog = ModifyDialog(this)
-            if (uph.isEmpty()){
+            if (uph.isEmpty()||uid.isEmpty()){
                 dialog.setTitle("비밀번호 찾기 실패")
-                dialog.setMessage("휴대전화 번호를 기입해주세요")
-                dialog.show()
-            }
-            else if(uph.length != 11){
-                dialog.setTitle("비밀번호 찾기 실패")
-                dialog.setMessage("휴대전화 번호를 정확히 기입해주세요")
+                dialog.setMessage("빈칸을 기입해주세요")
                 dialog.show()
             }
             Log.d("Findpw","ph : $uph")
 
-            findpwService.requestFindpw(uph).enqueue(object: Callback<Findpw>{
+            findpwService.requestFindpw(uid,uph).enqueue(object: Callback<Findpw>{
                 override fun onFailure(call: Call<Findpw>, t: Throwable) {
                     Log.d("비밀번호 찾기 실패","${t.localizedMessage}")
                     dialog.setTitle("에러")
@@ -63,30 +62,33 @@ class FindActivity : AppCompatActivity() {
                     dialog.setTitle("비밀번호 찾기 성공")
                     dialog.setMessage(findpw?.msg)
                     dialog.show()
+                    mpdialog.showDialog()
+                    mpdialog.setOnClickListener(object : ModifyDialog.OnDialogClickListener{
+                        override fun onClicked(modifypw: String) {
+                            mpw = modifypw
+                            Log.d("비밀번호 찾기 성공","mpw: $mpw")
+                        }
 
-                    if(findpw?.code == 100){
-                        Log.d("비밀번호 찾기 성공","intent성공")
-                        mpdialog.showDialog()
-                        mpdialog.setOnClickListener(object : ModifyDialog.OnDialogClickListener{
-                            override fun onClicked(modifypw: String) {
-                                modifypwService.requestModifypw(modifypw).enqueue(object : Callback<Modifypw>{
-                                    override fun onFailure(call: Call<Modifypw>, t: Throwable) {
-                                        Log.d("비밀번호 찾기 실패",t.localizedMessage)
-                                        Toast.makeText(this@FindActivity,"서버와 연결이 원활하지 않습니다",Toast.LENGTH_LONG)
-
-                                    }
-                                    override fun onResponse(call: Call<Modifypw>, response: Response<Modifypw>) {
-                                        val modifypw = response.body()
-                                        Log.d("비밀번호 변경 성공","msg : "+modifypw?.msg)
-                                        Toast.makeText(this@FindActivity,"비밀번호 변경에 성공하셨습니다",Toast.LENGTH_LONG)
-
-                                    }
-
-                                })
+                    })
+                    if(findpw?.code == 200){
+                        modifypwService.requestModifypw(mpw).enqueue(object : Callback<Modifypw>{
+                            override fun onFailure(call: Call<Modifypw>, t: Throwable) {
+                                Log.d("비밀번호 찾기 실패",t.localizedMessage)
+                                Toast.makeText(this@FindActivity,"서버와 연결이 원활하지 않습니다",Toast.LENGTH_LONG)
 
                             }
+                            override fun onResponse(call: Call<Modifypw>, response: Response<Modifypw>) {
+                                val modifypw = response.body()
+                                Log.d("비밀번호 변경 성공","msg : "+modifypw?.msg)
+                                Toast.makeText(this@FindActivity,"비밀번호 변경에 성공하셨습니다",Toast.LENGTH_LONG)
+
+                                startActivity(intent)
+
+                            }
+
                         })
                     }
+
                 }
             })
 

@@ -17,7 +17,7 @@ class ModifyDialog(context:Context) {
 
     fun showDialog()
     {
-        dialog.setContentView(R.layout.custom_dialog)
+        dialog.setContentView(R.layout.modifypw)
         dialog.window!!.setLayout(WindowManager.LayoutParams.WRAP_CONTENT, WindowManager.LayoutParams.WRAP_CONTENT)
         dialog.setCanceledOnTouchOutside(true)
         dialog.setCancelable(true)

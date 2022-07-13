@@ -14,6 +14,7 @@ interface RegisterService {
         @Field("userid") userid:String,
         @Field("userpw") userpw:String,
         @Field("userph") userph:String,
-        @Field("usersn") usersn:String
+        @Field("serialnum") serialnum:String,
+        @Field("name") name:String
     ) : Call<Register>
 }

@@ -9,6 +9,22 @@
     android:background="@drawable/background"
     >
 
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="279dp"
+        android:fontFamily="@font/nsr"
+        android:text="이름"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_serialnum" />
 
     <TextView
         android:id="@+id/textView25"
@@ -112,6 +128,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView25" />
 
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView26" />
+
     <TextView
         android:id="@+id/passwordcheck"
         android:layout_width="wrap_content"
@@ -150,7 +178,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="148dp"
+        android:layout_marginTop="192dp"
         android:fontFamily="@font/nsr"
         android:text="약관"
         android:textColor="@color/white"
@@ -192,8 +220,8 @@
 
     <TextView
         android:id="@+id/editTextTextMultiLine"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_width="308dp"
+        android:layout_height="78dp"
         android:layout_marginStart="50dp"
         android:layout_marginTop="3dp"
         android:layout_marginEnd="50dp"

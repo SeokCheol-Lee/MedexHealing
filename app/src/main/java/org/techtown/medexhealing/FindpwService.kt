@@ -10,6 +10,7 @@ interface FindpwService {
     @FormUrlEncoded
     @POST("app_list/pw_1")
     fun requestFindpw(
-        @Field("userph") userph:String
+        @Field("id") id:String,
+        @Field("ph") ph:String
     ) : Call<Findpw>
 }

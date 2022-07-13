@@ -37,24 +37,33 @@ class SingnUpActivity : AppCompatActivity() {
             var upc = rgbinding.etCheckpw.text.toString()
             var uph = rgbinding.etPhonenum.text.toString()
             var usn = rgbinding.etSerialnum.text.toString()
+            var uame = rgbinding.etName.text.toString()
             var dialog = AlertDialog.Builder(this@SingnUpActivity)
             val intent = Intent(this@SingnUpActivity,LoginActivity::class.java)
+            Log.d("회원가입 정보","uid : $uid")
+            Log.d("회원가입 정보","upw : $upw")
+            Log.d("회원가입 정보","upc : $upc")
+            Log.d("회원가입 정보","uph : $uph")
+            Log.d("회원가입 정보","usn : $usn")
+            Log.d("회원가입 정보","usn : $uame")
 
-            if(uid.isEmpty()||upw.isEmpty()||uph.isEmpty()||upc.isEmpty()||usn.isEmpty()){
+            if(uid.isEmpty()||upw.isEmpty()||uph.isEmpty()||upc.isEmpty()||usn.isEmpty()||uame.isEmpty()){
                 isExistBlack = true
+                Log.d("회원가입 정보 확인","빈칸있음")
             }
             else if(upw == upc){
-                    isPWSame = true
+                isPWSame = true
+                Log.d("회원가입 정보 확인","비밀번호 중복 성공")
+                if(rgbinding.checkBox.isChecked){
+                    isCheck = true
+                    Log.d("회원가입 정보 확인","약관동의")
                 }
-            else if(rgbinding.checkBox.isChecked){
-                isCheck = true
             }
 
-
             if(!isExistBlack && isPWSame && isCheck){
-                Log.d("Main"," id: $uid, pw: $upw, phone: $uph, serial: $usn")
+                Log.d("Main"," id: $uid, pw: $upw, phone: $uph, serial: $usn, name: $uame")
 
-                registerService.requestRegister(uid,upw,uph,usn).enqueue(object: Callback<Register> {
+                registerService.requestRegister(uid,upw,uph,usn,uame).enqueue(object: Callback<Register> {
 
                     override fun onResponse(call: Call<Register>, response: Response<Register>) {
                         val register = response.body()
@@ -63,6 +72,8 @@ class SingnUpActivity : AppCompatActivity() {
                         dialog.setTitle("회원가입 성공")
                         dialog.setMessage(register?.msg)
                         dialog.show()
+                        startActivity(intent)
+
 
                         if(register?.code == 100){
                             Log.d("회원가입 성공","intent성공")
@@ -81,14 +92,17 @@ class SingnUpActivity : AppCompatActivity() {
                 })
             }
             else{
-                if(isExistBlack){
+                if(!isExistBlack){
                     dialog("blank")
+                    Log.d("회원가입 정보 재확인","빈칸있음")
                 }
                 else if(!isPWSame){
                     dialog("not same")
+                    Log.d("회원가입 정보 재확인","비밀번호중복실패")
                 }
                 else if(!isCheck){
                     dialog("not check")
+                    Log.d("회원가입 정보 재확인","약관동의x")
                 }
 
             }
