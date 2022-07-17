@@ -7,48 +7,82 @@
     android:layout_height="360dp">
 
     <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="헤드"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="20dp"/>
     <ImageButton
         android:id="@+id/btn_headup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/ic_baseline_arrow_circle_up_24"
+        android:background="@drawable/confirm_btn_up"
         android:layout_marginStart="70dp"
-        android:layout_marginTop="60dp"/>
+        android:layout_marginTop="100dp"/>
     <ImageButton
         android:id="@+id/btn_headdown"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/ic_baseline_arrow_circle_down_24"
+        android:background="@drawable/confirm_btn_down"
         android:layout_marginStart="70dp"
-        android:layout_marginTop="150dp"/>
+        android:layout_marginTop="190dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="레그"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"/>
     <ImageButton
         android:id="@+id/btn_legup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/ic_baseline_arrow_circle_up_24"
+        android:background="@drawable/confirm_btn_up"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="60dp"/>
+        android:layout_marginTop="100dp"/>
     <ImageButton
         android:id="@+id/btn_legdown"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/ic_baseline_arrow_circle_down_24"
+        android:background="@drawable/confirm_btn_down"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="150dp"/>
+        android:layout_marginTop="190dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="온도"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:layout_marginStart="290dp"
+        android:layout_marginTop="20dp"/>
     <ImageButton
         android:id="@+id/btn_temup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/ic_baseline_arrow_circle_up_24"
+        android:background="@drawable/confirm_btn_up"
         android:layout_marginStart="280dp"
-        android:layout_marginTop="60dp"/>
+        android:layout_marginTop="100dp"/>
     <ImageButton
         android:id="@+id/btn_temdown"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/ic_baseline_arrow_circle_down_24"
+        android:background="@drawable/confirm_btn_down"
         android:layout_marginStart="280dp"
-        android:layout_marginTop="150dp"/>
+        android:layout_marginTop="190dp"/>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="?android:attr/listDivider"
+        android:layout_marginTop="70dp"
+        android:backgroundTint="@color/black"/>
 
 
 
