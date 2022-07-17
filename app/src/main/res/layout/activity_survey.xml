@@ -4,98 +4,89 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SurveyActivity"
-    android:background="@drawable/background">
+    tools:context=".Survey.SurveyActivity">
+
+
+    <Button
+        android:id="@+id/btn_surwakeup"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginStart="32dp"
+        android:background="@drawable/recborder"
+        android:text="기상시간설정"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_surwakeup"
+        app:layout_constraintStart_toEndOf="@+id/tv_surwakeup"
+        app:layout_constraintTop_toTopOf="@+id/tv_surwakeup" />
 
     <TextView
-        android:id="@+id/textView17"
+        android:id="@+id/tv_surwakeup"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:text="분"
-        android:fontFamily="@font/nsr"
-        android:textColor="@color/white"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/spinner4"
-        app:layout_constraintStart_toEndOf="@+id/spinner4"
-        app:layout_constraintTop_toTopOf="@+id/textView9" />
-
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:text="분"
-        android:fontFamily="@font/nsr"
-        android:textColor="@color/white"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/spinner3"
-        app:layout_constraintStart_toEndOf="@+id/spinner3"
-        app:layout_constraintTop_toTopOf="@+id/textView8" />
-
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:text="시"
-        android:fontFamily="@font/nsr"
-        android:textColor="@color/white"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/spinner2"
-        app:layout_constraintStart_toEndOf="@+id/spinner2"
-        app:layout_constraintTop_toTopOf="@+id/textView9" />
-
-    <Spinner
-        android:id="@+id/spinner4"
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView9"
-        app:layout_constraintStart_toEndOf="@+id/textView15"
-        app:layout_constraintTop_toTopOf="@+id/textView9" />
-
-    <Spinner
-        android:id="@+id/spinner2"
-        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
+        android:text="9:00"
         app:layout_constraintBottom_toBottomOf="@+id/textView9"
         app:layout_constraintStart_toEndOf="@+id/textView9"
         app:layout_constraintTop_toTopOf="@+id/textView9" />
 
     <TextView
+        android:id="@+id/textView28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/nsr"
+        android:text="생년월일"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="120dp"
-        android:text="OOO님의 현재 상태를 작성해주세요"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/nsr"
-        android:textColor="@color/white"
+        android:text="수면만족도"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <Spinner
+        android:id="@+id/spin_sat"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/et_weight"
+        app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/tv_surname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="44dp"
+        android:fontFamily="@font/nsr"
+        android:text="OOO님의 현재 상태를 작성해주세요"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="80dp"
-        android:text="취침시간"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="32dp"
         android:fontFamily="@font/nsr"
-        android:textColor="@color/white"
+        android:text="취침시간"
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-
+        app:layout_constraintTop_toBottomOf="@+id/tv_surname" />
 
     <TextView
         android:id="@+id/textView9"
@@ -105,7 +96,6 @@
         android:layout_marginTop="20dp"
         android:text="기상시간"
         android:fontFamily="@font/nsr"
-        android:textColor="@color/white"
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -116,10 +106,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="70dp"
-        android:text="보유질환"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/nsr"
-        android:textColor="@color/white"
+        android:text="보유질환"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/nsr"
+        android:text="성별"
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -133,7 +135,6 @@
         android:layout_marginTop="20dp"
         android:text="키"
         android:fontFamily="@font/nsr"
-        android:textColor="@color/white"
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -147,60 +148,17 @@
         android:layout_marginTop="20dp"
         android:text="몸무게"
         android:fontFamily="@font/nsr"
-        android:textColor="@color/white"
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="70dp"
-        android:text="코골이가 있으십니까?"
-        android:fontFamily="@font/nsr"
-        android:textColor="@color/white"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
-
-
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13">
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="100dp"
-            android:text="네"
-            android:textColor="@color/white"
-            android:fontFamily="@font/nsr"/>
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="아니오"
-            android:textColor="@color/white"
-            android:fontFamily="@font/nsr"/>
-
-
-    </RadioGroup>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btn_summit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="60dp"
-        android:backgroundTint="@color/main_green"
         android:text="제출"
         android:fontFamily="@font/nsr"
         android:textColor="@color/black"
@@ -212,65 +170,104 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView8"
-        app:layout_constraintStart_toEndOf="@+id/textView8"
-        app:layout_constraintTop_toTopOf="@+id/textView8" />
-
-    <Spinner
-        android:id="@+id/spinner3"
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView8"
-        app:layout_constraintStart_toEndOf="@+id/textView14"
-        app:layout_constraintTop_toTopOf="@+id/textView8" />
-
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:text="시"
-        android:fontFamily="@font/nsr"
-        android:textColor="@color/white"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/spinner"
-        app:layout_constraintStart_toEndOf="@+id/spinner"
-        app:layout_constraintTop_toTopOf="@+id/textView8" />
-
-    <Spinner
-        android:id="@+id/spinner6"
+        android:id="@+id/spin_sick"
         android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
+        android:layout_height="25dp"
         app:layout_constraintBottom_toBottomOf="@+id/textView10"
-        app:layout_constraintStart_toEndOf="@+id/textView10"
+        app:layout_constraintStart_toStartOf="@+id/spin_gender"
         app:layout_constraintTop_toTopOf="@+id/textView10" />
 
     <EditText
-        android:id="@+id/editTextNumberDecimal"
+        android:id="@+id/et_height"
         android:layout_width="wrap_content"
-        android:layout_height="25dp"
-        android:background="@drawable/recborder"
-        android:ems="10"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:textSize="15dp"
         android:inputType="numberDecimal"
-        app:layout_constraintStart_toStartOf="@+id/spinner6"
+        app:layout_constraintBottom_toBottomOf="@+id/textView11"
+        app:layout_constraintStart_toStartOf="@+id/spin_sick"
         app:layout_constraintTop_toTopOf="@+id/textView11" />
 
     <EditText
-        android:id="@+id/editTextNumberDecimal2"
+        android:id="@+id/et_weight"
         android:layout_width="wrap_content"
-        android:layout_height="25dp"
-        android:background="@drawable/recborder"
-        android:ems="10"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:ems="5"
         android:inputType="numberDecimal"
         app:layout_constraintBottom_toBottomOf="@+id/textView12"
-        app:layout_constraintStart_toStartOf="@+id/editTextNumberDecimal"
+        app:layout_constraintStart_toStartOf="@+id/et_height"
         app:layout_constraintTop_toTopOf="@+id/textView12" />
+
+    <Spinner
+        android:id="@+id/spin_gender"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView27"
+        app:layout_constraintStart_toStartOf="@+id/tv_surwakeup"
+        app:layout_constraintTop_toTopOf="@+id/textView27" />
+
+    <Button
+        android:id="@+id/btn_birth"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/recborder"
+        android:text="날짜 변경하기"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_birth"
+        app:layout_constraintStart_toEndOf="@+id/tv_birth"
+        app:layout_constraintTop_toTopOf="@+id/tv_birth"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tv_birth"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:hint="2022/07/17"
+        app:layout_constraintBottom_toBottomOf="@+id/textView28"
+        app:layout_constraintStart_toStartOf="@+id/spin_sat"
+        app:layout_constraintTop_toTopOf="@+id/textView28" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="cm"
+        app:layout_constraintBottom_toBottomOf="@+id/et_height"
+        app:layout_constraintStart_toEndOf="@+id/et_height"
+        app:layout_constraintTop_toTopOf="@+id/et_height" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="kg"
+        app:layout_constraintBottom_toBottomOf="@+id/et_weight"
+        app:layout_constraintStart_toStartOf="@+id/textView13"
+        app:layout_constraintTop_toTopOf="@+id/et_weight" />
+
+    <Button
+        android:id="@+id/btn_sursleep"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginStart="32dp"
+        android:textSize="10dp"
+        android:background="@drawable/recborder"
+        android:text="취침시간설정"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_sursleep"
+        app:layout_constraintStart_toEndOf="@+id/tv_sursleep"
+        app:layout_constraintTop_toTopOf="@+id/tv_sursleep" />
+
+    <TextView
+        android:id="@+id/tv_sursleep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:text="9:00"
+        app:layout_constraintBottom_toBottomOf="@+id/textView8"
+        app:layout_constraintStart_toEndOf="@+id/textView8"
+        app:layout_constraintTop_toTopOf="@+id/textView8" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
