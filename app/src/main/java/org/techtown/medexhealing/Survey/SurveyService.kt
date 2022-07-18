@@ -10,7 +10,7 @@ interface SurveyService {
     @FormUrlEncoded
     @POST("app_list/survey")
     fun requestSurvey(
-        @Field("serial") serial:String,
+        @Field("serialnum") serialnum:String,
         @Field("gender") gender:String,
         @Field("birth") birth:String,
         @Field("height") height:String,
@@ -18,6 +18,6 @@ interface SurveyService {
         @Field("sleeptime") sleeptime:String,
         @Field("wakeuptime") wakeuptime:String,
         @Field("sickness") sickness:String,
-        @Field("satisfaciton") satisfaction:String
+        @Field("satisfaction") satisfaction:String
     ) : Call<Survey>
 }
