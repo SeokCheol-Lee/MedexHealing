@@ -2,28 +2,74 @@ package org.techtown.medexhealing
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.widget.LinearLayout
 import android.widget.ListView
+import android.widget.TextView
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import org.techtown.medexhealing.Information.ApiInterface
+import org.techtown.medexhealing.Information.MyAdapter
+import org.techtown.medexhealing.Information.MyDataItem
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+
+const val BASE_URL = "http://220.149.244.199:3001/"
 
 class InformationSleepActivity : AppCompatActivity() {
+
+    lateinit var myAdapter: MyAdapter
+    lateinit var linearLayoutManager: LinearLayoutManager
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_information_sleep)
 
-        val sleepInfoList = mutableListOf<String>()
+        val recyclerview_sleepContent = findViewById<RecyclerView>(R.id.recyclerview_sleepContent)
 
-        // 아래 항목은 예시 항목으로 나중에 바꿔야함!!!!
-        sleepInfoList.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget pharetra diam.")
-        sleepInfoList.add("Curabitur pellentesque ipsum bibendum orci rhoncus, id auctor mi posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet venenatis elit, non iaculis felis.")
-        sleepInfoList.add("Donec ac sapien malesuada, fringilla arcu et, tincidunt nisl. Etiam efficitur lacinia imperdiet. Maecenas massa enim, dictum id lectus ac, ullamcorper mattis justo")
-        sleepInfoList.add("Proin in dictum libero, non mattis tortor. Vivamus quis magna ut est facilisis sodales sit amet et augue.")
-        sleepInfoList.add("Aliquam consectetur orci ante, sit amet ullamcorper mauris laoreet eget.")
+        recyclerview_sleepContent.setHasFixedSize(true)
+
+        linearLayoutManager = LinearLayoutManager(this)
+        recyclerview_sleepContent.layoutManager = linearLayoutManager
 
 
-        val sleepInfoListView = findViewById<ListView>(R.id.sleepInfoList)
-        val adapter = InformationSleepAdapter(sleepInfoList)
 
-        sleepInfoListView.adapter = adapter
+        fun getMyData() {
+            val retrofitBuilder = Retrofit.Builder()
+                .addConverterFactory(GsonConverterFactory.create())
+                .baseUrl(BASE_URL)
+                .build()
+                .create(ApiInterface::class.java)
+
+            val retrofitData = retrofitBuilder.getData()
+
+            retrofitData.enqueue(object : Callback<List<MyDataItem>?> {
+                override fun onResponse(call: Call<List<MyDataItem>?>, response: Response<List<MyDataItem>?>) {
+                    Log.d("retrofit", response?.body().toString())
+                    val responseBody = response.body()!!
+
+                    myAdapter = MyAdapter(baseContext, responseBody)
+                    myAdapter.notifyDataSetChanged()
+                    recyclerview_sleepContent.adapter = myAdapter
+
+
+                }
+
+                override fun onFailure(call: Call<List<MyDataItem>?>, t: Throwable) {
+                    Log.d("MainActivity", "onFailure: " + t.message)
+                }
+
+            })
+        }
+
+        getMyData()
+
     }
+
+
 }

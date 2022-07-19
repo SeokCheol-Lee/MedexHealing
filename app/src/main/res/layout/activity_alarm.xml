@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/black">
         <TextView
             android:id="@+id/time_text"
             android:layout_width="wrap_content"
@@ -14,20 +15,31 @@
             android:layout_centerVertical="true"
             android:textColor="@color/black"
             android:textSize="30sp"/>
+
         <Button
             android:id="@+id/time_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/time_text"
             android:layout_centerHorizontal="true"
-            android:text="시간지정"/>
+            android:fontFamily="@font/nsr"
+            android:text="시간지정"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:background="@drawable/little_button"/>/
+
         <Button
             android:id="@+id/alarm_cancel_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:layout_below="@+id/time_btn"
-            android:text="알람 취소"/>
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/little_button"
+            android:fontFamily="@font/nsr"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="알람 취소" />
 
 
     </RelativeLayout>

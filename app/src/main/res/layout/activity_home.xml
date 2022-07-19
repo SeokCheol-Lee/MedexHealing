@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity"
     android:orientation="vertical"
-    android:background="@drawable/background">
+    android:background="@color/black">
 
     <TextView
         android:id="@+id/tv_home"
