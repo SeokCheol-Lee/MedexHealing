@@ -82,8 +82,6 @@ class FindActivity : AppCompatActivity() {
                                 Log.d("비밀번호 변경 성공","msg : "+modifypw?.msg)
                                 Toast.makeText(this@FindActivity,"비밀번호 변경에 성공하셨습니다",Toast.LENGTH_LONG)
 
-                                startActivity(intent)
-
                             }
 
                         })

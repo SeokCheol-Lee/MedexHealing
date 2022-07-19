@@ -147,7 +147,6 @@ class LoginActivity : AppCompatActivity() {
                         MySharedPreferences.setUserName(this@LoginActivity, name)
                         MySharedPreferences.setUserSerial(this@LoginActivity, serial)
                         startActivity(intent)
-                        finish()
                     }
                     else {
                         MySharedPreferences.removeUser(this@LoginActivity)
