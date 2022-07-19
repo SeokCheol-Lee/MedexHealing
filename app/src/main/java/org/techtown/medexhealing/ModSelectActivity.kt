@@ -33,9 +33,14 @@ class ModSelectActivity : AppCompatActivity() {
         TabLayoutMediator(msbinding.tabLayout, msbinding.viewPager){tab, position ->
             tab.text = titles.get(position)
         }.attach()
+
+
         msbinding.tabLayout.getTabAt(0)?.setIcon(R.drawable.rebreak)
+
         msbinding.tabLayout.getTabAt(1)?.setIcon(R.drawable.shield)
+
         msbinding.tabLayout.getTabAt(2)?.setIcon(R.drawable.sleeping)
+
         msbinding.tabLayout.getTabAt(3)?.setIcon(R.drawable.settings)
     }
     fun changeTextView(string:String){
