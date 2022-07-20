@@ -56,7 +56,7 @@
         <entry key="app/src/main/res/layout/activity_mod_select.xml" value="0.23246053059895833" />
         <entry key="app/src/main/res/layout/activity_pairing.xml" value="0.4779190722509105" />
         <entry key="app/src/main/res/layout/activity_provision.xml" value="0.18177083333333333" />
-        <entry key="app/src/main/res/layout/activity_singn_up.xml" value="0.18177083333333333" />
+        <entry key="app/src/main/res/layout/activity_singn_up.xml" value="0.5" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.25791015625" />
         <entry key="app/src/main/res/layout/activity_survey.xml" value="0.5" />
         <entry key="app/src/main/res/layout/activity_user_create.xml" value="0.22552083333333334" />
