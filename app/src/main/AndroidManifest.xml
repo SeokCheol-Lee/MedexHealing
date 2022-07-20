@@ -22,12 +22,21 @@
         android:theme="@style/Theme.AppCompat.NoActionBar"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".InformationSnoreActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InformationStretchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InformationBreatheActivity"
+            android:exported="false" />
+        <activity
             android:name=".AlarmOpen"
             android:exported="false" />
         <activity
             android:name=".AlarmActivity"
             android:exported="false"
-            android:theme="@style/Splash"/>
+            android:theme="@style/Splash" />
         <activity
             android:name=".InformationSleepActivity"
             android:exported="false"

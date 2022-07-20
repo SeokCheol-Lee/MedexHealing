@@ -21,5 +21,20 @@ class InformationActivity : AppCompatActivity() {
             var intent = Intent(this, InformationSleepActivity::class.java)
             startActivity(intent)
         }
+
+        binding.breatheBtn.setOnClickListener {
+            var intent = Intent(this, InformationBreatheActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.stretchBtn.setOnClickListener {
+            var intent = Intent(this, InformationStretchActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.snoreBtn.setOnClickListener {
+            var intent = Intent(this, InformationSnoreActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

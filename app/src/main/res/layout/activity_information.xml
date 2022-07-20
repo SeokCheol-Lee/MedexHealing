@@ -87,6 +87,7 @@
             android:textSize="25sp"
             android:textStyle="bold"/>
         <Button
+            android:id="@+id/breatheBtn"
             android:background="@drawable/home_button"
             android:layout_marginTop="10dp"
             android:layout_marginStart="20dp"
@@ -99,6 +100,7 @@
             android:textSize="25sp"
             android:textStyle="bold"/>
         <Button
+            android:id="@+id/stretchBtn"
             android:background="@drawable/home_button"
             android:layout_marginTop="10dp"
             android:layout_marginStart="20dp"
@@ -111,6 +113,7 @@
             android:textSize="25sp"
             android:textStyle="bold"/>
         <Button
+            android:id="@+id/snoreBtn"
             android:background="@drawable/home_button"
             android:layout_marginTop="10dp"
             android:layout_marginStart="20dp"
