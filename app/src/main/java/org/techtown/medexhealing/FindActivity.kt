@@ -67,25 +67,26 @@ class FindActivity : AppCompatActivity() {
                         override fun onClicked(modifypw: String) {
                             mpw = modifypw
                             Log.d("비밀번호 찾기 성공","mpw: $mpw")
+                            if(findpw?.code == 200){
+                                modifypwService.requestModifypw(mpw).enqueue(object : Callback<Modifypw>{
+                                    override fun onFailure(call: Call<Modifypw>, t: Throwable) {
+                                        Log.d("비밀번호 변경 실패",t.localizedMessage)
+                                        Toast.makeText(this@FindActivity,"서버와 연결이 원활하지 않습니다",Toast.LENGTH_LONG)
+
+                                    }
+                                    override fun onResponse(call: Call<Modifypw>, response: Response<Modifypw>) {
+                                        val modifypw = response.body()
+                                        Log.d("비밀번호 변경 성공","msg : "+modifypw?.msg)
+                                        Toast.makeText(this@FindActivity,"비밀번호 변경에 성공하셨습니다",Toast.LENGTH_LONG)
+
+                                    }
+
+                                })
+                            }
                         }
 
                     })
-                    if(findpw?.code == 200){
-                        modifypwService.requestModifypw(mpw).enqueue(object : Callback<Modifypw>{
-                            override fun onFailure(call: Call<Modifypw>, t: Throwable) {
-                                Log.d("비밀번호 찾기 실패",t.localizedMessage)
-                                Toast.makeText(this@FindActivity,"서버와 연결이 원활하지 않습니다",Toast.LENGTH_LONG)
 
-                            }
-                            override fun onResponse(call: Call<Modifypw>, response: Response<Modifypw>) {
-                                val modifypw = response.body()
-                                Log.d("비밀번호 변경 성공","msg : "+modifypw?.msg)
-                                Toast.makeText(this@FindActivity,"비밀번호 변경에 성공하셨습니다",Toast.LENGTH_LONG)
-
-                            }
-
-                        })
-                    }
 
                 }
             })
