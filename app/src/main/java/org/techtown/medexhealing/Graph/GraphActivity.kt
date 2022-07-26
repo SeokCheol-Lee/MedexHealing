@@ -25,7 +25,9 @@ class GraphActivity : AppCompatActivity() {
         var serial = MySharedPreferences.getUserSerial(this)
 
         var snore: ArrayList<Int>
+        snore = arrayListOf<Int>(123,12,3124,124,213,123,124,12,31,24,12,3)
         var sleep: ArrayList<Int>
+        sleep = arrayListOf<Int>(123,12,3124,124,213,123,124,12,31,24,12,3)
         var snore_chart: LineChart = findViewById(R.id.chart_snoring)
         var sleep_chart: LineChart = findViewById(R.id.chart_sleep)
 
@@ -45,8 +47,8 @@ class GraphActivity : AppCompatActivity() {
                 Log.d("시각화","enco2: "+req?.enco2)
                 Log.d("시각화","sleep: "+req?.sleep)
                 Log.d("시각화","snore: "+req?.snore)
-                snore = req?.snore!!
-                sleep = req?.sleep!!
+                //snore = req?.snore!!
+                //sleep = req?.sleep!!
                 LinchartGh(snore_chart,snore)
                 LinchartGh(sleep_chart,sleep)
                 graphbinding.tvEntm.setText("${req?.entem}°C")

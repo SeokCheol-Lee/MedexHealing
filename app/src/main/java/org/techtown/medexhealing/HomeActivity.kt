@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import org.techtown.medexhealing.Graph.GraphActivity
 import org.techtown.medexhealing.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {
@@ -34,6 +35,10 @@ class HomeActivity : AppCompatActivity() {
         hmbinding.btnPairing.setOnClickListener {
             val printent = Intent(this,EspTouchActivity::class.java)
             startActivity(printent)
+        }
+        hmbinding.btnBedinfo.setOnClickListener {
+            val intent = Intent(this, GraphActivity::class.java)
+            startActivity(intent)
         }
     }
 }
