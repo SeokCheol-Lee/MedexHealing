@@ -22,6 +22,9 @@
         android:theme="@style/Theme.AppCompat.NoActionBar"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".Graph.GraphActivity"
+            android:exported="false" />
+        <activity
             android:name=".InformationSnoreActivity"
             android:exported="false" />
         <activity

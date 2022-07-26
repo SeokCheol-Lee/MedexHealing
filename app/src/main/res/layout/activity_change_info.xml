@@ -20,14 +20,15 @@
         style="@style/titleText1" />
 
     <TextView
-        android:layout_marginTop="5dp"
+        android:id="@+id/tv_ciph"
+        style="@style/titleText1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="010-XXXX-XXXX"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
         android:layout_marginRight="20dp"
-        android:textColor="@color/white"
-        style="@style/titleText1"/>
+        android:text="010-XXXX-XXXX"
+        android:textColor="@color/white" />
 
     <View
         android:layout_width="match_parent"

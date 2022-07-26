@@ -55,6 +55,8 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.6.0'
     implementation 'com.google.android.material:material:1.6.1'
 
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
     // ESP touch 코드
     implementation 'com.github.EspressifApp:lib-esptouch-android:1.0.0'
     implementation 'com.github.EspressifApp:lib-esptouch-v2-android:2.2.1'
