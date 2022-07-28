@@ -57,6 +57,19 @@ object MySharedPreferences {
         return prefs.getString("MY_SERIAL", "").toString()
     }
 
+    fun setPhoneNum(context: Context, input: String){
+        val prefs : SharedPreferences = context.getSharedPreferences(MY_ACCOUNT, Context.MODE_PRIVATE)
+        val editor : SharedPreferences.Editor = prefs.edit()
+        editor.putString("MY_PHONE", input)
+        editor.commit()
+    }
+
+    fun getPhoneNum(context: Context): String {
+        val prefs : SharedPreferences = context.getSharedPreferences(MY_ACCOUNT, android.content.Context.MODE_PRIVATE)
+        return prefs.getString("MY_PHONE", "").toString()
+    }
+
+
     fun getUserCheck(context: Context) : Boolean{
         val prefs : SharedPreferences = context.getSharedPreferences(MY_ACCOUNT, Context.MODE_PRIVATE)
         return prefs.getBoolean("MY_CHECK", false)

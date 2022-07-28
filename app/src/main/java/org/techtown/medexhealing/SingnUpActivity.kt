@@ -39,6 +39,7 @@ class SingnUpActivity : AppCompatActivity() {
             var usn = rgbinding.etSerialnum.text.toString()
             var uame = rgbinding.etName.text.toString()
             var dialog = AlertDialog.Builder(this@SingnUpActivity)
+            var phoneNum = rgbinding.etPhonenum.text.toString()
             val intent = Intent(this@SingnUpActivity,LoginActivity::class.java)
             Log.d("회원가입 정보","uid : $uid")
             Log.d("회원가입 정보","upw : $upw")
@@ -69,6 +70,10 @@ class SingnUpActivity : AppCompatActivity() {
                         val register = response.body()
                         Log.d("회원가입 성공","msg : "+register?.msg)
                         Log.d("회원가입 성공","code : "+register?.code)
+
+                        // 전화번호 저장
+                        MySharedPreferences.setPhoneNum(this@SingnUpActivity, phoneNum)
+
                         dialog.setTitle("회원가입 성공")
                         dialog.setMessage(register?.msg)
                         dialog.show()
